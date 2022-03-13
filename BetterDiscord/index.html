@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SmolAlli's Site - BetterDiscord Guides</title>
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/22519967" type="image/x-icon">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
+
+    <meta content="BetterDiscord Guides - SmolAlli" property="og:title">
+    <meta content="Step by step instructions for performing common tasks and solving common problems." property="og:description">
+    <meta name="description" content="Step by step instructions for performing common tasks and solving common problems with BetterDiscord.">
+    <meta name="theme-color" content="#802BB1">
+    <meta name="author" content="SmolAlli">
+    <meta name="keywords" content="Discord, BetterDiscord, Better Discord, Discord Mod, Discord Themes, Discord Plugins, Discord Extensions, Discord Client Mod, Discord Hacks, BetterDisord Guide, Guide Better Discord Guide">
+
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <script defer src="../js/theme.js"></script>
+</head>
+<body class="">
+    <nav id="navbar"><script src="../js/navbar.js"></script></nav>
+
+    <main>
+        <br><div class="h1">BetterDiscord Support</div><hr><br>
+        <p>Unofficial Guide on how to use BetterDiscord, and how to solve the common issues that come with it. Please let me know if there are any bugs here by going to <a href='https://betterdiscord.app/invite'target="_blank" rel="noopener noreferrer">BetterDiscord's Discord Server</a> and mentioning @SmolAlli#2706 with the problem that you found, and where.</p>
+
+        <div class="group">
+            <h2>Help</h2>
+            <div class="options">
+                <a href="#install"  class="button">Installer</a>
+                <a href="#crash"    class="button">Crashes</a>
+                <a href="#support"  class="button">Need Support?</a>
+            </div>
+        </div>
+        <div class="group">
+            <h2>Visual Guides</h2>
+            <div class="options">
+                <a href="#visual-ins"   class="button">Install</a>
+                <a href="#visual-ptins" class="button">Install Themes/Plugins</a>
+                <a href="#visual-unins" class="button">Uninstall</a>
+            </div>
+        </div>
+        <div class="group">
+            <h2>Guides</h2>
+            <div class="options">
+                <a href="#manual"   class="button">Manual Installation</a>
+                <a href="#vanilla"  class="button">Vanilla Commands</a>
+                <a href="#faq"      class="button">FAQ</a>
+            </div>
+        </div>
+        <div class="group">
+            <h2>Other</h2>
+            <div class="options">
+                <a href="#submit"   class="button">Submissions</a>
+                <a href="#links"    class="button">Helpful Links</a>
+                <a href="#credit"   class="button">Credit</a>
+            </div>
+        </div>
+        <br>
+    </main>
+
+    <template id="faq">
+        <br><div class="h1">Frequently Asked Questions (FAQ)</div><hr><br>
+        <h3>Which Operating System (OS) are you using?</h3>
+        <div class="choices">
+            <div class="choices-group">
+            <ul>
+                <li><button class="options" onclick="changeActive(this)">Windows</button></li>
+                <li><button class="options" onclick="changeActive(this)">Mac (OS X)</button></li>
+                <li><button class="options" onclick="changeActive(this)">Linux</button></li>
+            </ul>
+            </div>
+            <div class="output-group">
+                <div class="choice"><details>
+            <summary>"How do I use BetterDiscord?"</summary>
+            <p>
+                BetterDiscord is an source available platform for people to create and use addons to Discord, to make it the best experience for others.
+                <br>The plugins that are made for BetterDiscord are usually Quality-of-life type add-ons, and there are many themes that can be highly customisable, or have been carefully crafted.
+                <br>If you wish to use BetterDiscord, download it from the <a href="https://betterdiscord.app" target="_blank" rel="noopener noreferrer">official website</a> and follow the guide <a href="#install-guide">here</a>. 
+                Then download <a href="https://betterdiscord.app/themes" target="_blank" rel="noopener noreferrer">themes</a> and <a href="https://betterdiscord.app/plugins" target="_blank" rel="noopener noreferrer">plugins</a> and add them to BetterDiscord with the guide below.
+            </p>
+        </details><br>
+        <details>
+            <summary>"How do I install themes and plugins?"</summary>
+            <p>
+                You can follow the guide <a href="#visual-ptins">here</a> or follow the instructions below:
+                <br>1. Download the plugins/themes that you want to from the <a href="https://betterdiscord.app" target="_blank" rel="noopener noreferrer">BetterDiscord website</a>.
+                <br>2. In Discord, go to the settings (<img src="https://i.imgur.com/H1XCRcO.png" alt="Cog icon" class="cog-img" />) and then go to "plugins" or "themes" under the BetterDiscord settings depending on what you wish to install. 
+                <br>3. Click "Open (Themes/Plugins) Folder". 
+                <br>4. Move the files into the respective folders.
+                <br>5. Enable them back in Discord, by going back to "plugins" or "themes" in settings, and enable them as is shown below:
+                <br><br><img src="https://i.imgur.com/g0u2XRJ.png" alt="enable plugins and themes" />
+            </p>
+        </details><br>
+        <details>
+            <summary>"I use PTB/Canary, where do I install to?"</summary>
+            <p>On the locations, try changing <code>Discord</code> to <code>DiscordCanary</code> or <code>DiscordPTB</code> instead.</p>
+        </details><br>
+        <details>
+            <summary>"How do I uninstall BetterDiscord?"</summary>
+            <p>
+                You can follow the guide <a href="#visual-unins">here</a> or follow the instructions below:
+                <br>1. Open up the installer (it is recommended to get a new one from the <a href="https://betterdiscord.app" target="_blank" rel="noopener noreferrer">BetterDiscord website</a>).
+                <br>2. Click that you accept the license agreement, then "next". If you cannot do so, click specifically on the text next to the checkbox, as is shown below.
+                <br><br><img src="https://i.imgur.com/aIjzoAf.png" alt="Click the text!" /><br>
+                <br>3. Click 'uninstall', the bottom location
+                <br>4. Allow for it to uninstall
+                <br>5. (Optional) Go to your BetterDiscord folder and remove everything from it (can be accessed from <code>%appdata%/betterdiscord</code>). You can also delete the installer if you do not wish to use BD anymore.
+            </p>
+        </details><br>
+        <details>
+            <summary>"Where are my BetterDiscord folders located?"</summary>
+            <p>
+                Press <kbd>⊞Win</kbd> + <kbd>R</kbd> to open up the "Run" command, then paste in the path that you want to open the folder that you wish to open.
+                <br>For the BetterDiscord folder: <code>%appdata%/betterdiscord</code>.
+                <br>For the Plugins folder: <code>%appdata%/betterdiscord/plugins</code>.
+                <br>For the Themes folder: <code>%appdata%/betterdiscord/themes</code>.
+            </p>
+        </details><br>
+        <details>
+            <summary>"I get a JavaScript Fatal Error. What do I do?"</summary>
+            <p>
+                1. Uninstall Discord (press windows button, search 'uninstall' and uninstall from there)
+                <br>2. Go to <code>%localappdata%/discord</code> and <code>%appdata%/discord</code> and delete all files
+                <br>3. Reinstall Discord
+                <br>4. Check that Discord opens properly
+                <br>5. Reinstall BetterDiscord (get a new installer from <a href="https://betterdiscord.app" target="_blank" rel="noopener noreferrer">here</a>)
+            </p>
+        </details><br>
+        <details>
+            <summary>"BetterDiscord won't open with Discord. What do I do?"</summary>
+            <p>
+                This has been answered <a href="#install-win">here</a>. Search for "Install location" and follow the steps listed.
+                <br>If this does not work, you will have to reinstall Discord.
+            </p>
+        </details><br></div>
+                <div class="choice"><details>
+            <summary>"How do I use BetterDiscord?"</summary>
+            <p>
+                BetterDiscord is an source available platform for people to create and use addons to Discord, to make it the best experience for others.
+                <br>The plugins that are made for BetterDiscord are usually Quality-of-life type add-ons, and there are many themes that can be highly customisable, or have been carefully crafted.
+                <br>If you wish to use BetterDiscord, download it from the <a href="https://betterdiscord.app" target="_blank" rel="noopener noreferrer">official website</a> and follow the guide <a href="#install-guide">here</a>. 
+                Then download <a href="https://betterdiscord.app/themes" target="_blank" rel="noopener noreferrer">themes</a> and <a href="https://betterdiscord.app/plugins" target="_blank" rel="noopener noreferrer">plugins</a> and <a href="#faq-tp">add them to BetterDiscord</a>.
+            </p>
+        </details><br>
+        <details>
+            <summary>"How do I install themes and plugins?"</summary>
+            <p>
+                You can follow the guide <a href="#visual-ptins">here</a> or follow the instructions below:
+                <br>1. Download the plugins/themes that you want to from the <a href="https://betterdiscord.app" target="_blank" rel="noopener noreferrer">BetterDiscord website</a>.
+                <br>2. In Discord, go to the settings (<img src="https://i.imgur.com/H1XCRcO.png" alt="Cog icon" class="cog-img"/>) and then go to "plugins" or "themes" under the BetterDiscord settings depending on what you wish to install. 
+                <br>3. Click "Open (Themes/Plugins) Folder". 
+                <br>4. Move the files into the respective folders.
+                <br>5. Enable them back in Discord, by going back to "plugins" or "themes" in settings, and enable them as is shown below:
+                <br><br><img src="https://i.imgur.com/g0u2XRJ.png" alt="enable plugins and themes" />
+            </p>
+        </details><br>
+        <details>
+            <summary>"I use PTB/Canary, where do I install to?"</summary>
+            <p>On the locations, try changing <code>Discord</code> to <code>DiscordCanary</code> or <code>DiscordPTB</code> instead.</p>
+        </details><br>
+        <details>
+            <summary>"How do I uninstall BetterDiscord?"</summary>
+            <p>
+                You can follow the guide <a href="#visual-unins">here</a> or follow the instructions below:
+                <br>1. Open up the installer (it is recommended to get a new one from the <a href="https://betterdiscord.app" target="_blank" rel="noopener noreferrer">BetterDiscord website</a>).
+                <br>2. Click that you accept the license agreement, then "next". If you cannot do so, click specifically on the text next to the checkbox, as is shown below.
+                <br><br><img src="https://i.imgur.com/aIjzoAf.png" alt="Click the text!" /><br>
+                <br>3. Click 'uninstall', the bottom location
+                <br>4. Allow for it to uninstall
+                <br>5. (Optional) Go to your BetterDiscord folder and remove everything from it (which can be accessed from <code>~/Library/Application Support/betterdiscord</code>). You can also delete the installer if you do not wish to use BD anymore.
+            </p>
+        </details><br>
+        <details>
+            <summary>"Where are my BetterDiscord folders located?"</summary>
+            <p>
+                Press <kbd>⌘Command</kbd> + <kbd>Shift</kbd> + <kbd>G</kbd> in the finder to open the Go to Folder window, then paste in the path that you want to open the folder that you wish to open.
+                <br>For the BetterDiscord folder: <code>~/Library/Application Support/betterdiscord</code>.
+                <br>For the Plugins folder: <code>~/Library/Application Support/betterdiscord/plugins</code>.
+                <br>For the Themes folder: <code>~/Library/Application Support/betterdiscord/themes</code>.
+            </p>
+        </details><br>
+        <details>
+            <summary>"BetterDiscord won't open with Discord. What do I do?"</summary>
+            <p>
+                Open discord from application not desktop or anywhere else
+                <br>If it says it's damaged, reinstall discord and open it first before installing bd again
+            </p>
+        </details><br></div>
+                <div class="choice"><details>
+            <summary>"How do I use BetterDiscord?"</summary>
+            <p>
+                BetterDiscord is an source available platform for people to create and use addons to Discord, to make it the best experience for others.
+                <br>The plugins that are made for BetterDiscord are usually Quality-of-life type add-ons, and there are many themes that can be highly customisable, or have been carefully crafted.
+                <br>If you wish to use BetterDiscord, download it from the <a href="https://betterdiscord.app" target="_blank" rel="noopener noreferrer">official website</a> and follow the guide <a href="#install-guide">here</a>. 
+                Then download <a href="https://betterdiscord.app/themes" target="_blank" rel="noopener noreferrer">themes</a> and <a href="https://betterdiscord.app/plugins" target="_blank" rel="noopener noreferrer">plugins</a> and <a href="#faq-tp">add them to BetterDiscord</a>.
+            </p>
+        </details><br>
+        <details>
+            <summary>"How do I install themes and plugins?"</summary>
+            <p>
+                You can follow the guide <a href="#visual-ptins">here</a> or follow the instructions below:
+                <br>1. Download the plugins/themes that you want to from the <a href="https://betterdiscord.app" target="_blank" rel="noopener noreferrer">BetterDiscord website</a>.
+                <br>2. In Discord, go to the settings (<img src="https://i.imgur.com/H1XCRcO.png" alt="Cog icon" class="cog-img" />) and then go to "plugins" or "themes" under the BetterDiscord settings, depending on what you wish to install. 
+                <br>3. Click "Open (Themes/Plugins) Folder". 
+                <br>4. Move the files into the respective folders.
+                <br>5. Enable them back in Discord, by going back to "plugins" or "themes" in settings, and enable them as is shown below:
+                <br><br><img src="https://i.imgur.com/g0u2XRJ.png" alt="enable plugins and themes" />
+            </p>
+        </details><br>
+        <details>
+            <summary>"I use PTB/Canary, where do I install to?"</summary>
+            <p>On the locations, try changing <code>Discord</code> to <code>DiscordCanary</code> or <code>DiscordPTB</code> instead.</p>
+        </details><br>
+        <details>
+            <summary>"How do I uninstall BetterDiscord?"</summary>
+            <p>
+                You can follow the guide <a href="#visual-unins">here</a> or follow the instructions below:
+                <br>1. Open up the installer (it is recommended to get a new one from the <a href="https://betterdiscord.app" target="_blank" rel="noopener noreferrer">BetterDiscord website</a>).
+                <br>2. Click that you accept the license agreement, then "next". If you cannot do so, click specifically on the text next to the checkbox, as is shown below.
+                <br><br><img src="https://i.imgur.com/aIjzoAf.png" alt="Click the text!" /><br>
+                <br>3. Click 'uninstall', the bottom location
+                <br>4. Allow for it to uninstall
+                <br>5. (Optional) Go to your BetterDiscord folder and remove everything from it (which can be accessed from <code>~/.config/BetterDiscord</code>). You can also delete the installer if you do not wish to use BD anymore.
+            </p>
+        </details><br>
+        <details>
+            <summary>"Where are my BetterDiscord folders located?"</summary>
+            <p>
+                You will have to use the search/paste function for your file explorer to get to the folder that you need. This will be dependent on your specific version of Linux.
+                <br>For the BetterDiscord folder: <code>~/.config/BetterDiscord</code>.
+                <br>For the Plugins folder: <code>~/.config/BetterDiscord/plugins</code>.
+                <br>For the Themes folder: <code>~/.config/BetterDiscord/themes</code>.
+            </p>
+        </details><br></div>
+            </div>
+        </div>
+        <a href="#home" class="button back">Home</a>
+        <br>
+    </template>
+    
+    <!-- Vanilla commands -->
+    <template id="vanilla">
+        <br><div class="h1">Vanilla Commands</div><hr><br>
+        <p>
+            SmolAlli's guide to using the vanilla command to get access to regular Discord temporarily. 
+            <br>To restore: Close down Discord completely, then re-open it.
+        </p>
+
+        <h3>Which Operating System (OS) are you using?</h3>
+        <div class="choices">
+        <div class="choices-group">
+            <ul>
+                <li><button class="options" onclick="changeActive(this)">Windows</button></li>
+                <li><button class="options" onclick="changeActive(this)">Mac (OS X)</button></li>
+                <li><button class="options" onclick="changeActive(this)">Linux</button></li>
+            </ul>
+        </div>
+        <div class="output-group">
+        <div class="choice"><h3>How to use the <code>--vanilla</code> command:</h3>
+        <p>
+            1. Close Discord
+            <br>2. Press <kbd>⊞Win</kbd> + <kbd>R</kbd>
+            <br>3. Paste <code>%localappdata%\Discord\app-1.0.9004\discord.exe --vanilla</code> into the chatbox that appears
+        </p>
+        <br>
+        <h3>Vanilla Discord Desktop shortcut:</h3>
+        <p>
+            1. On the desktop, right click, choose "New" and then "Create Shortcut"
+            <br>2. You can either create a shortcut that stops Discord then re-opens it (a), or just opens it (b).
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;a. Paste into the filepath <code>powershell.exe start %USERPROFILE%\AppData\Local\Discord\app-1.0.9004\Discord.exe --vanilla</code>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;b. Paste into the filepath <code>powershell.exe Stop-Process -Name Discord; start %USERPROFILE%\AppData\Local\Discord\app-1.0.9004\Discord.exe --vanilla</code>
+            <br>3. Choose a name for the shortcut, and voila! A shortcut. 
+            <br>4. (optional): You can get the icon that Discord uses from <code>%USERPROFILE%\AppData\Local\Discord\app.ico</code> so that the shortcut looks good.
+        </p></div>
+        <div class="choice"><h3>How to use the <code>--vanilla</code> command:</h3>
+        <p>
+            1. Close Discord
+            <br>2. Open terminal with <kbd>⌘Command</kbd> + <kbd>Spacebar</kbd>
+            <br>3. Paste in <code>open /Applications/Discord.app --args --vanilla<code>
+        </p></div>
+        <div class="choice"><h3>How to use the <code>--vanilla</code> command:</h3>
+        <p>
+            1. Close Discord
+            <br>2. Open the terminal or alt + f2
+            <br>3. Paste in <code>discord --vanilla</code>
+        </p></div>
+        </div>
+        </div>
+        <a href="#home" class="button back">Home</a>
+        <br>
+    </template>
+
+    <!-- Manual installation guide -->
+    <template id="manual">
+        <br><div class="h1">Manually Installing BetterDiscord</div><hr><br>
+        
+        <p>Please follow this guide CAREFULLY to install BetterDiscord, if the regular installer will not work! Any OS will work for this, but please go to your specific OS.</p>
+        <br>
+        <h3>Which Operating System (OS) are you using?</h3>
+        <div class="choices">
+            <div class="choices-group">
+            <ul>
+                <li><button class="options" onclick="changeActive(this)">Windows 10</button></li>
+                <li><button class="options" onclick="changeActive(this)">Windows 7</button></li>
+                <li><button class="options" onclick="changeActive(this)">Mac (OS X)</button></li>
+                <li><button class="options" onclick="changeActive(this)">Linux</button></li>
+            </ul>
+            </div>
+            <div class="output-group">
+                <div class="choice">
+                    <p>
+                    1. Install <a href="https://github.com/git-for-windows/git/releases/download/v2.34.1.windows.1/Git-2.34.1-64-bit.exe">Git</a> and <a href="https://nodejs.org/dist/v16.13.1/node-v16.13.1-x64.msi">Node.js</a> (Required)
+                    <br>2. Open up Windows Powershell (Administrator) and check that you are NOT in the system32 directory. Change that with the follow command:
+                    <code>cd ~/</code>
+                    <br>3. Copy/paste the following commands: 
+                    <br><br>This below copies all of the commands into one mega command to simplify the process.
+                    <div class="choices sub">
+                        <div class="choices-group">
+                        <ul class="sub">
+                            <li><button class="options active" onclick="changeActive(this)">Powershell</button></li>
+                            <li><button class="options" onclick="changeActive(this)">Command Prompt</button></li>
+                        </ul>
+                        </div>
+                        <div class="output-group">
+                            <div class="choice active"><input type="text" value="git clone https://github.com/BetterDiscord/BetterDiscord.git; cd ./BetterDiscord/; npm install; npm run build; npm run inject" readonly="" id="copy-1">
+                            <button onclick="copyText(this.previousElementSibling)" class="button">Click here to copy</button></div>
+                            <div class="choice"><input type="text" value="git clone https://github.com/BetterDiscord/BetterDiscord.git && cd ./BetterDiscord/ && npm install && npm run build && npm run inject" readonly="" id="copy-2">
+                            <button onclick="copyText(this.previousElementSibling)" class="button">Click here to copy</button></div>
+                        </div>
+                    </div>
+                    <br><br>> <code>git clone https://github.com/BetterDiscord/BetterDiscord.git</code>
+                    <br><br>> <code>cd ./BetterDiscord/</code>
+                    <br><br>> <code>npm install</code>
+                    <br><br>> <code>npm run build</code>
+                    <br><br>> <code>npm run inject</code>
+                    <br><br>For that last command, if you are using a non-stable install of Discord, add <code>canary</code> or <code>ptb</code> at the end of the command.
+                    </p>
+                </div>
+                <div class="choice">
+                    <p>
+                    1. Install <a href="https://github.com/git-for-windows/git/releases/download/v2.34.1.windows.1/Git-2.34.1-64-bit.exe">Git</a> and <a href="https://nodejs.org/download/release/v13.14.0/node-v13.14.0-x64.msi">Node.js</a> (Required)
+                    <br>2. Open up Windows Powershell (Administrator) and check that you are NOT in the system32 directory. Change that with the follow command:
+                    <code>cd ~/</code>
+                    <br>3. Copy/paste the following commands:
+                    <br><br>This below copies all of the commands into one mega command to simplify the process.
+                    <div class="choices sub">
+                        <div class="choices-group">
+                        <ul class="sub">
+                            <li><button class="options active" onclick="changeActive(this)">Powershell</button></li>
+                            <li><button class="options"onclick="changeActive(this)">Command Prompt</button></li>
+                        </ul>
+                        </div>
+                        <div class="output-group">
+                            <div class="choice active"><input type="text" value="git clone https://github.com/BetterDiscord/BetterDiscord.git; cd ./BetterDiscord/; npm install; npm run build; npm run inject" readonly="" id="copy-1">
+                            <button onclick="copyText(this.previousElementSibling)" class="button">Click here to copy</button></div>
+                            <div class="choice"><input type="text" value="git clone https://github.com/BetterDiscord/BetterDiscord.git && cd ./BetterDiscord/ && npm install && npm run build && npm run inject" readonly="" id="copy-2">
+                            <button onclick="copyText(this.previousElementSibling)" class="button">Click here to copy</button></div>
+                        </div>
+                    </div>
+                    <br><br>> <code>git clone https://github.com/BetterDiscord/BetterDiscord.git</code>
+                    <br><br>> <code>cd ./BetterDiscord/</code>
+                    <br><br>> <code>npm install</code>
+                    <br><br>> <code>npm run build</code>
+                    <br><br>> <code>npm run inject</code>
+                    <br><br>For that last command, if you are using a non-stable install of Discord, add <code>canary</code> or <code>ptb</code> at the end of the command.
+                    </p>    
+                </div>
+                <div class="choice">
+                    <p>
+                    1. Install <a href="https://git-scm.com/download/mac">Git</a> and <a href="https://nodejs.org/dist/v16.13.1/node-v16.13.1.pkg">Node.js</a> (Required)
+                    <br>2. Open up MacOS Terminal (using <kbd>⌘Command</kbd> + <kbd>spacebar</kbd> and type in "Terminal")
+                    <br>3. Copy/paste the following commands: 
+                    <br><br>This below copies all of the commands into one mega command to simplify the process.
+                    <input type="text" value="git clone https://github.com/BetterDiscord/BetterDiscord.git && cd ./BetterDiscord/ && npm install && npm run build && npm run inject" readonly="" id="copy">
+                    <button onclick="copyText(this.previousElementSibling)" class="button">Click here to copy</button>
+                    <br><br>> <code>git clone https://github.com/BetterDiscord/BetterDiscord.git</code>
+                    <br><br>> <code>cd ./BetterDiscord/</code>
+                    <br><br>> <code>npm install</code>
+                    <br><br>> <code>npm run build</code>
+                    <br><br>> <code>npm run inject</code>
+                    <br><br>For that last command, if you are using a non-stable install of Discord, add <code>canary</code> or <code>ptb</code> at the end of the command.
+                    </p>
+                </div>
+                <div class="choice">
+                    <p>
+                    1. Install <a href="https://git-scm.com/download/linux">Git</a> and <a href="https://nodejs.org/dist/v16.13.1/node-v16.13.1.tar.gz">Node.js</a> (Required)
+                    <br>2. Open up Terminal 
+                    <br>Copy/paste the following commands:
+                    <br><br>This below copies all of the commands into one mega command to simplify the process.
+                    <input type="text" value="git clone https://github.com/BetterDiscord/BetterDiscord.git && cd ./BetterDiscord/ && npm install && npm run build && npm run inject" readonly="" id="copy">
+                    <button onclick="copyText(this.previousElementSibling)" class="button">Click here to copy</button>
+                    <br><br>> <code>git clone https://github.com/BetterDiscord/BetterDiscord.git</code>
+                    <br><br>> <code>cd ./BetterDiscord/</code>
+                    <br><br>> <code>npm install</code>
+                    <br><br>> <code>npm run build</code>
+                    <br><br>> <code>npm run inject</code>
+                    <br><br>For that last command, if you are using a non-stable install of Discord, add <code>canary</code> or <code>ptb</code> at the end of the command.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <a href="#home" class="button back">Home</a>
+
+        <h2>Resources/Credit</h2>
+        <p>
+            Source from <a href="https://github.com/BetterDiscord/BetterDiscord#manual-installation">BetterDiscord</a>
+        </p>
+        <br>
+    </template>
+
+    <!-- Installer -->
+    <template id="install">
+        <br><div class="h1">BetterDiscord Support - Installer</div><hr><br>
+        <p>Guide for using the Installer for BetterDiscord, and its common issues.</p>
+        <div class="choices">
+            <div class="choices-group">
+                <ul>
+                    <li><button class="options" onclick="changeActive(this)">Installation Guide</button></li>
+                    <li><button class="options" onclick="changeActive(this)">Installation Errors</button></li>
+                    <li><button class="options" onclick="changeActive(this)">Installation Issues</button></li>
+                </ul>
+            </div>
+            <div class="output-group">
+                <div class="choice">
+                    <p>You can follow the guide <a href="">here</a> or follow the instructions below:
+                    <br><br>Here is a guide on how to use the installer.
+                    <br>1. Download the installer from the <a href="https://betterdiscord.app" target="_blank" rel="noopener noreferrer">official website</a> (and delete any old installers that you have)
+                    <br>2. Open the installer. If it does not open, go to <a href="#install-issue">this link</a>.
+                    <br>3. Click that you accept the license agreement, then "next". If you cannot do so, click specifically on the text next to the checkbox, as is shown below.
+                    <br><br><img src="https://i.imgur.com/aIjzoAf.png" alt="Click the text!" />
+                    <br>4. Click "install", then "next".
+                    <br>5. Click on the version that you wish to install BetterDiscord onto, then click "install". It should show a path to the "resources" folder for that install, but if it doesn't, go to <a href="#install-issue">this link</a>.
+                    <br>6. It should install and say that is has successfully installed. If there is an error message, go to <a href="#install-error">this link</a> and look for your specifc error.
+                    <br>7. BetterDiscord should now be installed. You can check this by going to the settings part of Discord (<img src="https://i.imgur.com/H1XCRcO.png" alt="Cog icon"  class="cog-img"/>), with the new settings as shown below. If it is not, please follow <a href="#install-issue">this link</a>.
+                    <br><br><img src="https://i.imgur.com/siYiZRQ.png" alt="BetterDiscord Settings" /></p>
+                </div>
+                <div class="choice">
+                    <p>These are specifically for error which occur while installing BetterDiscord. If you have an issue like the installer not opening, go to <a href="#install-issue">this link</a>
+                    <br>If you are unsure of how to use the installer, or get stuck, go to <a href="#install-guide">this link</a></br>
+                    </p>
+                    <details>
+                        <summary>Unable to click the checkbox to proceed through to the installation</summary>
+                        <p>Click the text right next to the checkbox, as shown below:</p>
+                        <img src="https://i.imgur.com/aIjzoAf.png" alt="Click the text!" /><br>
+                    </details><br>
+                    <details>
+                        <summary>No installation folder location found on the install page</summary>
+                        <p>
+                            Please go to <a href="#install-issue">this link</a> and go to the part which says "No install path OR BetterDiscord not installed after using installer" for your specific Operating System.
+                            <br>(Note: there is not a location listed for Linux, rather, use the link listed on the page.)
+                        </p>
+                    </details><br>
+                    <details>
+                        <summary>"&#10060; Cannot read property 'assets' of undefined" OR installer freezing at "downloading asar file..."</summary>
+                        <p>
+                            You have an old installer that is not getting the asar file from the new GitHub repository. Follow these steps:
+                            <br>1. Remove all of the installers that you have currently
+                            <br>2. Get a new installer from <a href="https://betterdiscord.app" target="_blank" rel="noopener noreferrer">the BetterDiscord website</a>
+                        </p>
+                    </details><br>
+                    <details>
+                        <summary>"&#10060; EACCES: permission denied, mkdir", or any error where at "shims" there is a "mkdir" error</summary>
+                        <p>
+                            Your install of Discord is corrupted, and you will need to redownload Discord. Help can be found 
+                            <a href="https://discordtips.com/how-to-fully-uninstall-discord/" target="_blank" rel="noopener noreferrer">here</a>
+                        </p>
+                    </details><br>
+                    <details>
+                        <summary>"&#10060; Cannot read property 'hasOwnProperty' of undefined" error</summary>
+                        <p>
+                            There are quite a few things that could be causing this issue.
+                            <br>1. Get a new installer from <a href="https://betterdiscord.app" target="_blank" rel="noopener noreferrer">the BetterDiscord website</a>. Delete any that you have before this.
+                            <br>2. Either change your location on a VPN you are using to the US if you are outside of America (mainly China or other places where activity is limited), or disable your VPN, Proxy, AntiVirus or Firewall.
+                            <br>3. Try again with the Discord application closed.
+                            <br>4. Fully reinstall Discord. Help can be found 
+                            <a href="https://discordtips.com/how-to-fully-uninstall-discord/" target="_blank" rel="noopener noreferrer">here</a>
+                        </p>
+                    </details><br>
+                    <details>
+                        <summary>&#10060; getaddrinfo ENOTFOUND api.github.com</summary>
+                        <p>
+                            This usually caused by your internet service provider interfering with the DNS lookup.
+                            <br>1. Disable your AntiVirus/VPN and run the installer again
+                            <br>
+                            <br>2. Find your operating system on <a href="https://www.ionos.com/digitalguide/server/configuration/how-to-change-dns-server/" target="_blank" rel="noopener noreferrer">this guide</a> 
+                            <br>Follow the steps to change the DNS server addresses to either of these:
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;a. Google - server 1: 8.8.8.8 server 2: 8.8.4.4
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;b. Cloudflare - server 1 1.1.1.1 server 2: 1.0.0.1
+                            <br>Then try the installer again.
+                            <br>
+                            <br>3. <a href="https://www.ionos.com/digitalguide/server/configuration/flush-dns/" target="_blank" rel="noopener noreferrer">Flush your DNS cache.</a>
+                        </p>
+                    </details><br>
+                    <details>
+                        <summary>Any other error while installing</summary>
+                        <p>
+                            Try disabling any VPN, Proxy, AntiVirus and Firewall that you have, and try again. These can also occur from a slow internet connection.
+                        </p>
+                    </details><br>
+                </div>
+                <div class="choice">
+                    <h3>Which Operating System (OS) are you using?</h3>
+                    <div class="choices">
+                        <div class="choices-group">
+                            <ul>
+                                <li><button class="options" onclick="changeActive(this)">Windows</button></li>
+                                <li><button class="options" onclick="changeActive(this)">Mac (OS X)</button></li>
+                                <li><button class="options" onclick="changeActive(this)">Linux</button></li>
+                            </ul>
+                        </div>
+                        <div class="output-group">
+                            <div class="choice">
+                                <details>
+                                    <summary>No install path OR BetterDiscord not installed after using installer</summary>
+                                    <p>
+                                    If you do not have a path to the Discord folder to install BetterDiscord into, or BetterDiscord did not show after installing, then press "browse" and paste <code>%localappdata%/discord/app-1.0.9004/resources</code> into the top bar. 
+                                    <br>If you do not know how to do that, look to the video below.
+                                    <br>If BetterDiscord is still not on your Discord after installing, then use the path <code>%programdata%/%username%/Discord/app-1.0.9004/resources</code>. 
+                                    <br>If neither of these work, reinstall Discord and try again.
+                                    <br>This is shown below:
+                                    <br><br><img src="https://cdn.discordapp.com/attachments/542030029861814284/863124888974000198/programdata.gif" alt="BetterDiscord Settings" />
+                                    </p>
+                                </details><br>
+                                <details>
+                                    <summary>Installer won't open</summary>
+                                    <p>
+                                        If the installer seems to not want to open at all, then follow these instructions:
+                                        <br>1. Download and install <a href="https://7-zip.org" target="_blank" rel="noopener noreferrer">7-zip</a> (if you do not have it already)
+                                        <br>2. Create a new folder (can be anywhere)
+                                        <br>3. Right click on the BetterDiscord.exe file, and from the 7zip options, choose 'extract to...' and choose the folder you just created
+                                        <br>4. Use the exe file in the folder you extracted to.
+                                        <br><br>If this does not work, then try the <a href="https://github.com/BetterDiscord/Installer/releases/download/v1.0.0-hotfix/BetterDiscord-Windows.exe" target="_blank" rel="noopener noreferrer">hotfix</a>.
+                                        <br><br>
+                                        <br><br>If none of these solutions solved your problem, then try <a href="#manual">manually installing BetterDiscord</a>
+                                    </p>
+                                </details><br>
+                                <details>
+                                    <summary>Installer shows black instead of opening</summary>
+                                    <p>If you get a black screen, try the following: <br>1.Disable your AntiVirus.<br>2. Press <kbd>⊞Win</kbd> + <kbd>R</kbd> and paste <code>ipconfig /flushdns</code><br>3. If that doesn't work, try to restart your computer, or try the hotfix linked above.</p>
+                                </details>
+                            </div>
+                            <div class="choice">
+                                <details>
+                                    <summary>No install path OR BetterDiscord not installed after using installer</summary>
+                                    <p>
+                                        If you do not have a path to the Discord folder to install BetterDiscord into, then press "browse" and then <kbd>⌘Command</kbd> + <kbd>Shift</kbd> + <kbd>G</kbd>, then paste <code>/Applications/Discord/Contents/Resources</code> into the popup that appears.
+                                    </p>
+                                </details><br>
+                                <details>
+                                    <summary>Installer won't open</summary>
+                                    <p>
+                                        For the popup of "Developer cannot be verified", you can either:
+                                        <br>Click on the <kbd>?</kbd> icon at the top right of the popup 
+                                        <br>Go to system preferences, go to the security and privacy tab, then select "general" and click the padlock &#128274; at the bottom right, and log in. Then in the "Allow apps downloaded from:" section, select "anywhere." <a href="https://it.nmu.edu/docs/allowing-third-party-applications-install-macbook">Link to a guide here.</a>
+                                        <br><br>If the issue listed above was not your problem, then try <a href="#manual-mac">manually installing BetterDiscord</a>.
+                                    </p>
+                                </details><br>
+                            </div>
+                            <div class="choice"><p>
+                                If you are having issues with the regular installer, then try using <a href="https://gist.github.com/ObserverOfTime/d7e60eb9aa7fe837545c8cb77cf31172" target="_blank" rel="noopener noreferrer">betterdiscordctl</a> instead of the regular BD installer. If that does not work, you can instead try <a href="#manual-nix">manually installing BetterDiscord</a>.
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        
+        <a href="#home" class="button back">Home</a>
+    </template>
+
+    <!-- Crashes --> 
+    <template id="crash">
+        <br><div class="h1">BetterDiscord Support - Crashes</div><hr><br>
+            <p>Guide for crashes on BetterDiscord.</p>
+            <p>These are all of the plugins (and other things) which are causing crashes. For the location of the plugins folder: <a href="#faq">Click here.</a></p>
+            <details>
+                <summary>"&#9888;&#65039; BetterDiscord seems to have crashed your client."</summary>
+                <p>
+                    There are a few things that can cause for this to happen, such as the following:
+                    <br>1. There are some issues with the PTB (Public Test Beta) version of Discord and BetterDiscord, which leads to this error occuring, so you will have to use the Stable (more recommended) or Canary version of Discord.
+                    <br>2. You may have an outdated Library plugin. 
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;a. Download and replace <a href="https://betterdiscord.app/Download?id=9" target="_blank" rel="noopener noreferrer">ZeresPluginLibrary</a>
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;b. Download and replace <a href="https://betterdiscord.app/Download?id=59" target="_blank" rel="noopener noreferrer">BDFDB</a>. 
+                    <br>It is recommended to replace both of those and in your plugins folder.
+                    <br>You may need to delete the files first before replacing them, if it does not work the first time.
+                    <br>This may also be caused by plugins not on the <a href="https://betterdiscord.app/plugins" target="_blank" rel="noreferrer noopener"">the BetterDiscord website</a>. Please delete them IMMEDIATELY and do NOT reinstall them.
+                </p>
+            </details><br>
+            <details>
+                <summary>"Well, this is awkward" or "You died, looks like you got slaughtered by an Error Level 9000"</summary>
+                <p>
+                    You most likely have an outdated version of BetterDiscord, or an outdated/broken plugin. Please make sure that BetterDiscord is on version 1.3.0, and that your plugins are the most recent version.
+                    <br>If you wish to figure out which plugins are causing issues, you can either:
+                    <br>1. Take out all of the plugins from your plugins folder, then put them back in one at a time to see if they cause the issue.
+                    <br>2. Use the console tab from dev tools (Windows/Linux: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>, Mac: <kbd>⌘Command</kbd> + <kbd>Alt</kbd> + <kbd>I</kbd>), then go to the "Console" tab, click on "default levels" up the top and make it so that "errors" is the only option selected. You can either look for the name of plugins, or you can go to the <a href="https://betterdiscord.app/invite" target="_blank" rel="noreferrer noopener">Discord server</a> and send the screenshot in the <code>#support</code> channel for someone to help you diagnose the issue.
+                </p>
+            </details><br>
+        <a href="#home" class="button back">Home</a>
+    </template>
+
+    <!-- Support -->
+    <template id="support">
+        <br><div class="h1">Need Help?</div><hr><br>
+        <div class="answer">
+            Go to the <code>#support</code> channel on the <a href="https://betterdiscord.app/invite" target="_blank" rel="noreferrer noopener">BetterDiscord server</a>
+            and explain your problem clearly.
+        </div>
+        <a href="#home" class="button back">Home</a>
+    </template>
+
+    <!-- Links -->
+    <template id="links">
+        <br><div class="h1">Useful Links</div><hr><br>
+        <p>
+            <a href='https://betterdiscord.app/'target="_blank" rel="noopener noreferrer">BetterDiscord Website</a>
+            <br><a href='https://github.com/BetterDiscord/BetterDiscord' target="_blank" rel="noopener noreferrer">BetterDiscord Github Page</a>
+            <br><a href='https://betterdiscord.app/invite'target="_blank" rel="noopener noreferrer">BetterDiscord Discord Invite</a>
+        </p>
+        <a href="#home" class="button back">Home</a>
+    </template>
+
+    <!-- Credits -->
+    <template id="credit">
+        <br><div class="h1">Credit</div><hr><br>
+        <p>
+            Original Website Design and Idea by Qwerasd#5202 - <a href="https://bd.zerebos.com" target="_blank" rel="noopener noreferrer">BandagedBD Guide</a>
+            <br>Helpful people:
+            <br>DoggyBootsy#3442 - Helped with double-checking Mac OS information
+            <br>Qb#5942 - Helped with functionality of website
+            <br>square#3880 and slughead#9295 - DNS guide
+            <br>l0c4lh057#9748 - polishing and re-wording of certain parts
+            <br>and others from the BetterDiscord community - please DM me if you helped so I can add you.
+        </p>
+        <a href="#home" class="button back">Home</a>
+    </template>
+
+    <!-- Submissions -->
+    <template id="submit">
+        <br><div class="h1">Submitting Themes and Plugins</div><hr><br>
+        <details>
+            <summary>Submission Process</summary>
+            <p>
+                Submitting themes and plugins is done on the <a href="https://betterdiscord.app">BetterDiscord website</a>. Steps to submit:
+                <br>1. Go to the BetterDiscord website, and go to the Themes page to submit themes, or the Plugins page to submit plugins.
+                <br>2. Connect your Discord account to the website from the top right, by clicking "Connect" button as is shown here: 
+                <br><br><img src="https://i.imgur.com/HAJTNlF.png" alt="Connect" /><br>
+                <br>3. Click on the <code>Submit a theme</code> or <code>Submit a plugin</code> on the respective page. 
+                <br><br><img src="https://i.imgur.com/G7A2I4j.png" alt="Submit a theme" /><br>
+                <br>4. Add your Github account on the modal that pops up.
+                <br>5. Once the Github account has been connected, please wait at least 2 days for the repository to be accepted. If you do not follow the guidelines listed below, you will NOT have your add-on accepted.
+                <br>6. If your account is accepted, you will then be able to use the same submission button in step 3 to submit the add-on you wish to. This will then be verified by the BetterDiscord team.
+            </p>
+        </details><br>
+        <details>
+            <summary>Submission Guidelines</summary>
+            <h4>General</h4>
+            <ul>
+                <li>All addons must be in public GitHub repositories.</li>
+                <li>All addons must not negatively affect users.</li>
+                <li>All addons must not target specific users or groups.</li>
+                <li>All addons must not collect user data without opt-in consent.</li>
+            </ul>
+            <h4>Themes</h4>
+            <ul>
+                <li>Themes must only use @import with Google Fonts or GitHub. This does allow for GitHub-related CDNs as well as GitHub pages.</li>
+                <li>Themes must not abuse GitHub's raw links for @import statements.</li>
+            </ul>
+            <h4>Plugins</h4>
+            <ul>
+                <li>Plugins must not introduce new remote libraries.
+                    Existing remote libraries can still be used, but are officially deprecated to be disallowed in the future.</li>
+                <li>Plugins must not be obfuscated and/or deceitful.</li>
+                <li>Plugins must not modify globals or existing prototypes.</li>
+                <li>Plugins must not use BD globals outside of BdApi.</li>
+                <li>Plugins must not attempt to modify the BD UI. This is partially for consistency and partially to decrease the number of render issues caused by plugins.</li>
+                <li>Plugins and their corresponding libraries shall not operate outside of their intended functionality.
+                    This includes but is not limited to swapping out components unrelated to the plugin, introducing additional buttons, badges or other unrelated elements.</li>
+                <li>Plugins must not make use of or read user tokens, emails, or passwords.</li>
+            </ul>
+            <p>    
+                Source from <a href="https://github.com/BetterDiscord/BetterDiscord/wiki/Addon-Policies">BetterDiscord's Addons Policies page</a>
+            </p>
+        </details><br>
+        <details>
+            <summary>How to create add-ons</summary>
+            <p>
+                Details on how to create add-ons, such as the META and creation guides specfic to themes and plugins, are available <a href="https://github.com/BetterDiscord/BetterDiscord/wiki">here</a>.
+                <br>A <a href="https://gist.github.com/Jiiks/7b51de08cb8118682df8">theme</a> and <a href="https://gist.github.com/rauenzi/e5f4d02fc3085a53872b0236cd6f8225">plugin</a> example has also been created, to help with getting started with the basics.
+                <br><br>
+                If you are in need of assistance with the creation of themes or plugins, please go to the <a href="https://betterdiscord.app/invite">Discord server</a> and ask in <code>#custom-css</code> for help with creating themes, and <code>#programming</code> for help with creating plugins.
+            </p>
+        </details><br>
+        <a href="#home" class="button back">Home</a>
+    </template>
+
+    <!-- Visual -->
+    <template id="visual">
+        <br><br><h1>Visual Guides</h1><hr><br>
+        <h3>Which Guide would you like to use?</h3>
+        <div class="options">
+            <a href="#visual-ins" class="button">Installing BetterDiscord</a>
+            <a href="#visual-ptins" class="button">Installing Themes/Plugins</a>
+            <a href="#visual-unins" class="button">Uninstalling BetterDiscord</a>
+        </div>
+        <a href="#home" class="button back">&lt; Back</a>
+        <br>
+    </template>
+
+    <template id="visual-ins">
+        <br><br><h1>Installing BetterDiscord</h1><hr><br>
+        <div class="carousel">
+            <button class="carousel-button carousel-button-left hidden">
+                <img src="img/l.png">
+            </button>
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+                    <li class="carousel-slide current-slide">
+                        <a href="img/website.png" target="_blank" rel="noopener noreferrer"><img src="img/website.png" alt="BetterDiscord website"></a>
+                        <div class="hidden">
+                            Download the installer from the <a href="https://betterdiscord.app">BetterDiscord Website.</a>
+                        </div>
+                    </li>
+
+                    <li class="carousel-slide">
+                        <a href="img/downloads-folder.png" target="_blank" rel="noopener noreferrer"><img src="img/downloads-folder.png" alt="Open the installer from the downloads folder"></a>
+                        <div class="hidden">
+                            Go to your downloads folder and open the installer.
+                        </div>
+                    </li>
+
+                    <li class="carousel-slide">
+                        <a href="img/installing-bd.gif" target="_blank" rel="noopener noreferrer"><img src="img/installing-bd.gif" alt="Install BetterDiscord"></a>
+                        <div class="hidden">
+                            Accept the license, choose "install" and choose your version of Discord to install to.
+                            If you do not see an install, go <a href="#install-issue">here</a> to resolve this.<br>
+                            Allow for the installer to complete, and re-open Discord (if it did not restart automatically).
+                        </div>
+                    </li>
+
+                    <li class="carousel-slide">
+                        <p>Please check that there are no issues with the installer, and that BetterDiscord has appeared in your settings. If there is an issue, please look at the guides <a href="#install">here.</a></p>
+                        <div class="hidden">If there are no issues, you are done!
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <button class="carousel-button carousel-button-right">
+                <img src="img/r.png">
+            </button>
+            <div class="carousel-nav">
+                <button class="carousel-indicator current-slide"></button>
+                <button class="carousel-indicator"></button>
+                <button class="carousel-indicator"></button>
+                <button class="carousel-indicator"></button>
+            </div>
+            <div class="carousel-text">Download the installer from the <a href="https://betterdiscord.app">BetterDiscord Website.</a></div>
+        </div>
+        <a href="#visual" class="button back">&lt; Back</a>
+        <br>
+        <script src="../js/carousel.js"></script>
+    </template>
+    <template id="visual-ptins">
+        <br><br><h1>Installing Themes & Plugins</h1><hr><br>
+        <div class="carousel">
+            <button class="carousel-button carousel-button-left hidden">
+                <img src="img/l.png">
+            </button>
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+                    <li class="carousel-slide current-slide">
+                        <a href="img/website.png" target="_blank" rel="noopener noreferrer"><img src="img/website.png" alt="BetterDiscord website"></a>
+                        <div class="hidden">Download any themes/plugins you want from the <a href="http://betterdiscord.app">BetterDiscord Website</a>.</div>
+                    </li>
+                    <li class="carousel-slide">
+                        <a href="img/settings.gif" target="_blank" rel="noopener noreferrer">
+                        <img src="img/settings.gif" alt="BetterDiscord Themes/Plugins"></a>
+                        <div class="hidden">Go to the theme/plugin settings in Discord, and click on "Open (theme/plugin) folder".</div>
+                    </li>
+
+                    <li class="carousel-slide">
+                        <a href="img/movefiles.gif" target="_blank" rel="noopener noreferrer">
+                        <img src="img/movefiles.gif" alt="Move files"></a>
+                        <div class="hidden">Move the theme/plugin into the folder you just opened.</div>
+                    </li>
+
+                    <li class="carousel-slide">
+                        <a href="img/enable.gif" target="_blank" rel="noopener noreferrer">
+                        <img src="img/enable.gif" alt="Install BetterDiscord"></a>
+                        <div class="hidden">Enable it back in Discord.</div>
+                    </li>
+
+                    <li class="carousel-slide">
+                        <p>Now your theme/plugin is enabled. If you had an issue, please look at the guides <a href="#faq">here.</a></p>
+                        <div class="hidden">Congratulations, you have installed a theme/plugin!</div>
+                    </li>
+                </ul>
+            </div>
+            <button class="carousel-button carousel-button-right">
+                <img src="img/r.png" alt="">
+            </button>
+            <div class="carousel-nav">
+                <button class="carousel-indicator current-slide"></button>
+                <button class="carousel-indicator"></button>
+                <button class="carousel-indicator"></button>
+                <button class="carousel-indicator"></button>
+                <button class="carousel-indicator"></button>
+            </div>
+            <div class="carousel-text">Download the installer from the <a href="https://betterdiscord.app">BetterDiscord Website.</a></div>
+        </div>
+        <a href="#visual" class="button back">&lt; Back</a>
+        <br>
+        <script src="../js/carousel.js"></script>
+    </template>
+    <template id="visual-unins">
+        <br><br><h1>Uninstalling BetterDiscord</h1><hr><br>
+        <div class="carousel">
+            <button class="carousel-button carousel-button-left hidden">
+                <img src="img/l.png">
+            </button>
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+                    <li class="carousel-slide current-slide">
+                        <a href="img/website.png" target="_blank" rel="noopener noreferrer">
+                        <img src="img/website.png" alt="BetterDiscord website"></a>
+                        <div class="hidden">
+                            Download the installer from the <a href="https://betterdiscord.app">BetterDiscord Website.</a>
+                        </div>
+                    </li>
+
+                    <li class="carousel-slide">
+                        <a href="img/downloads-folder.png" target="_blank" rel="noopener noreferrer">
+                        <img src="img/downloads-folder.png" alt="Open the installer from the downloads folder"></a>
+                        <div class="hidden">
+                            Go to your downloads folder and open the installer.
+                        </div>
+                    </li>
+
+                    <li class="carousel-slide">
+                        <a href="img/uninstalling-bd.gif" target="_blank" rel="noopener noreferrer">
+                        <img src="img/uninstalling-bd.gif" alt="Uninstall BetterDiscord"></a>
+                        <div class="hidden">
+                            Accept the license, choose "uninstall" and choose your version of Discord to uninstall from.
+                            If you do not see an install, go <a href="#install-issue">here</a> to resolve this.<br>
+                            Allow for the installer to complete, and re-open Discord (if it did not restart automatically).
+                        </div>
+                    </li>
+
+                    <li class="carousel-slide">
+                        <p>Now check that BetterDiscord is no longer on your Discord install. If there is an issue, please look at the guides <a href="#install">here.</a></p>
+                        <div class="hidden">Now BetterDiscord has been uninstalled. So sad to see you go!</div>
+                    </li>
+                </ul>
+            </div>
+            <button class="carousel-button carousel-button-right">
+                <img src="img/r.png" alt="">
+            </button>
+            <div class="carousel-nav">
+                <button class="carousel-indicator current-slide"></button>
+                <button class="carousel-indicator"></button>
+                <button class="carousel-indicator"></button>
+                <button class="carousel-indicator"></button>
+            </div>
+            <div class="carousel-text">Download the installer from the <a href="https://betterdiscord.app">BetterDiscord Website.</a></div>
+        </div>
+
+        <a href="#visual" class="button back">&lt; Back</a>
+        <br>
+        <script src="../js/carousel.js"></script>
+    </template>
+
+    <script async="" src="../js/guides.js"></script>
+</body>
+</html>
