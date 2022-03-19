@@ -362,10 +362,19 @@ code {
   border: 1px solid var(--lighter-grey);
 }
 
+p {
+  line-height: 110%;
+}
+
+code {
+  line-height: 150%;
+  box-decoration-break: clone;
+}
+
 summary {
   cursor: pointer;
   font-size: 1.17em;
-  margin-top: 0.25em 0;
+  margin: 0.25em 0;
   font-weight: bold;
 }
 
@@ -508,6 +517,15 @@ input[type=text]:focus {
   --dark: #2d283e;
   --black: #000;
   --nav-primary: var(--purple3);
+}
+
+.theme-icon {
+  display: none;
+}
+
+.dark #darkIcon,
+.light #lightIcon {
+  display: block;
 }
 
 /*# sourceMappingURL=global.css.map */
