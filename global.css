@@ -549,6 +549,88 @@ input[type=text]:focus {
   background-color: transparent;
 }
 
+:root {
+  --area-height: 75%;
+}
+
+.skills .website, .skills .container, .front-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.skills, .front-main {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  padding: 5vw 0;
+}
+
+.front-main {
+  margin-top: 5vw;
+  background-color: rgba(56, 36, 68, 0.5);
+  /* Split the screen in half */
+  /* Control the left side */
+  /* Control the right side */
+}
+.front-main .left,
+.front-main .right {
+  height: var(--area-height);
+  /* If you want the content centered horizontally and vertically */
+}
+.front-main .left .centred,
+.front-main .right .centred {
+  text-align: left;
+}
+.front-main .left .centred img,
+.front-main .right .centred img {
+  width: 250px;
+  border-radius: 50%;
+}
+.front-main .left {
+  width: 40%;
+}
+.front-main .left p {
+  font-size: 20px;
+}
+.front-main .right {
+  width: auto;
+}
+
+.skills {
+  top: var(--area-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+}
+.skills .container {
+  top: 100px;
+  height: fit-content;
+  padding: 10px min(50px, 5rem);
+  top: -50px;
+}
+.skills .container .skill {
+  text-align: center;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  width: 150px;
+  height: fit-content;
+  block-size: fit-content;
+  flex: 1 0 13%;
+}
+.skills .website {
+  height: fit-content;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
 /* Carousel / Slideshow */
 .carousel {
   position: relative;
@@ -717,7 +799,7 @@ input[type=text]:focus {
 }
 
 .dark {
-  --bg: rgb(56, 36, 68, 0.9);
+  --bg: rgba(56, 36, 68, 0.9);
 }
 
 .modal #background {
@@ -799,5 +881,34 @@ input[type=text]:focus {
   -o-opacity: 1;
   opacity: 1;
 }
+.modal .back.button {
+  -webkit-margin-right: 2ch;
+  -moz-margin-right: 2ch;
+  -ms-margin-right: 2ch;
+  -o-margin-right: 2ch;
+  margin-right: 2ch;
+  top: 2ch;
+}
 
-/*# sourceMappingURL=global.css.map */
+#video {
+  object-fit: initial;
+  width: 946px;
+  height: 532px;
+}
+
+.videoButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.videoButton .button {
+  flex: 0;
+}
+
+/* Small screens (mobile) */
+@media only screen and (max-width: 800px) {
+  .videoButton {
+    display: none;
+  }
+}
