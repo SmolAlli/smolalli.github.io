@@ -1,0 +1,8 @@
+[data-color-mode='light'] {
+    --text-primary: var(--dark);
+    --text-secondary: var(--black);
+    --bg-colour: var(--light);
+    --filter: invert(13%) sepia(17%) saturate(1346%) hue-rotate(213deg) brightness(92%) contrast(89%);
+    --filter-sec: invert(0%) sepia(1%) saturate(7477%) hue-rotate(20deg) brightness(98%) contrast(99%);
+    $bg: rgb(209, 215, 224);
+}

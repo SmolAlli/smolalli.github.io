@@ -1,0 +1,71 @@
+---
+layout: '../../../layouts/BDLayout.astro'
+title: 'Crashes'
+og_title: 'Crashes'
+og_desc: 'Step by step instructions for diagnosing and fixing crashes from plugins.'
+---
+
+import Details from '../../../components/Details.astro';
+import ExternalLink from '../../../components/ExternalLink.astro';
+
+These are specifically for error which occur while installing BetterDiscord. If you have an issue like the installer not opening, go to<a href="issues">this link</a>
+
+If you are unsure of how to use the installer, or get stuck, go to <a href="../install">this link</a>
+
+<Details summary="Unable to click the checkbox to proceed through to the installation">
+Click the text right next to the checkbox, as shown below:
+
+<img src="https://i.imgur.com/aIjzoAf.png" alt="Click the text!" />
+</Details>
+
+<Details summary="No installation folder location found on the install page">
+Please go to <a href="/BetterDiscord/install/issues">this link</a> and go to the part which says "No install path OR BetterDiscord not installed after using installer" for your specific Operating System.
+
+(Note: there is not a location listed for Linux, rather, use the link listed on the page.)
+</Details>
+
+<Details summary={'"&#10060; Cannot read property "assets" of undefined" OR installer freezing at "downloading asar file..."'}>
+You have an old installer that is not getting the asar file from the new GitHub repository. Follow these steps:
+
+1\. Remove all of the installers that you have currently
+
+2\. Get a new installer from <ExternalLink href="https://betterdiscord.app">the BetterDiscord website</ExternalLink>
+</Details>
+
+<Details summary={'"&#10060; EACCES: permission denied, mkdir", or any error where at "shims" there is a "mkdir" error'}>
+Your install of Discord is corrupted, and you will need to redownload Discord. Help can be found <ExternalLink href="https://discordtips.com/how-to-fully-uninstall-discord/">here</ExternalLink>
+</Details>
+
+<Details summary={'"&#10060; Cannot read property "hasOwnProperty" of undefined" error'}>
+There are quite a few things that could be causing this issue.
+
+1\. Get a new installer from <ExternalLink href="https://betterdiscord.app">the BetterDiscord website</ExternalLink>. Delete any that you have before this.
+
+2\. Either change your location on a VPN you are using to the US if you are outside of America (mainly China or other places where activity is limited), or disable your VPN, Proxy, AntiVirus or Firewall.
+
+3\. Try again with the Discord application closed.
+
+4\. Fully reinstall Discord. Help can be found <ExternalLink href="https://discordtips.com/how-to-fully-uninstall-discord/">here</ExternalLink>
+</Details>
+
+<Details summary={'"&#10060; getaddrinfo ENOTFOUND api.github.com"'}>
+This usually caused by your internet service provider interfering with the DNS lookup.
+
+1\. Disable your AntiVirus/VPN and run the installer again
+
+2\. Find your operating system on <ExternalLink href="https://www.ionos.com/digitalguide/server/configuration/how-to-change-dns-server/">this guide</ExternalLink>
+
+Follow the steps to change the DNS server addresses to either of these:
+
+&nbsp;&nbsp;&nbsp;&nbsp;a\. Google - server 1: 8.8.8.8 server 2: 8.8.4.4
+
+&nbsp;&nbsp;&nbsp;&nbsp;b\. Cloudflare - server 1 1.1.1.1 server 2: 1.0.0.1
+
+Then try the installer again.
+
+3\. <ExternalLink href="https://www.ionos.com/digitalguide/server/configuration/flush-dns/">Flush your DNS cache.</ExternalLink>
+</Details>
+
+<Details summary="Any other error while installing">
+Try disabling any VPN, Proxy, AntiVirus and Firewall that you have, and try again. These can also occur from a slow internet connection.
+</Details>

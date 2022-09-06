@@ -1,0 +1,24 @@
+@use "../abstracts" as *;
+
+#video {
+    object-fit: initial;
+    width: 946px;
+    height: 532px;
+}
+
+.videoButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    .button {
+        flex: 0;
+    }
+}
+
+/* Small screens (mobile) */
+@media only screen and (max-width: $screen-width) {
+    .videoButton {
+        display: none;
+    }
+}

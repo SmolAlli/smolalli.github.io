@@ -1,0 +1,95 @@
+@use "../abstracts" as *;
+
+html {
+    overflow-y: scroll;
+    @include vendor-prefix("box-sizing", "border-box");
+}
+
+*,
+*::before,
+*::after {
+    @include vendor-prefix("box-sizing", "inherit");
+}
+
+ul,
+li {
+    @include vendor-prefix("margin", "0");
+    @include vendor-prefix("padding", "0");
+    text-indent: 0;
+    list-style-type: none;
+}
+
+::marker {
+    display: none;
+}
+
+a {
+    color: var(--text-secondary);
+}
+
+[id] {
+    scroll-margin-top: calc(var(--nav-height) + 1vw);
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.cog-img {
+    top: 6px;
+    position: relative;
+}
+
+/* Main area for the page */
+main {
+    @include vendor-prefix("padding", "var(--main-padding)");
+    top: var(--nav-height);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    color: var(--text-primary);
+    background-color: var(--bg-colour);
+    @include resetPM;
+}
+/* Table of contents */
+
+.table-of-contents {
+    list-style: none;
+    @include vendor-prefix("padding", "1px");
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    @include vendor-prefix("margin", "0"); /* 2 */
+}
+
+button,
+input {
+    /* 1 */
+    overflow: visible;
+}
+
+button,
+select {
+    /* 1 */
+    text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+    @include vendor-prefix("border", "0px");
+}

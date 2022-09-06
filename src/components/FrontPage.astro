@@ -1,0 +1,49 @@
+---
+import Bubbles from "../components/Bubbles.svelte";
+---
+
+<div class="front-main">
+    <div class="left">
+        <div class="centred">
+            <h1>Hi, I'm Alli.</h1>
+            <p>
+                I'm a computer science student and aspiring website developer. <br
+                />
+                This website serves as both a way for me to show what I have done,
+                as well as give a temporary place to get guides for BetterDiscord.
+            </p>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="centred">
+            <img
+                src="https://avatars.githubusercontent.com/u/22519967"
+                alt="SmolAlli"
+            />
+        </div>
+    </div>
+</div>
+
+<div class="skills">
+    <div class="h1">Languages and Skills</div>
+    <div class="container">
+        <Bubbles
+            elemNames={[
+                "JavaScript",
+                "CSS + SCSS",
+                "HTML",
+                "Svelte",
+                "React",
+                "Flutter",
+                "C++",
+                "C#",
+                "Java",
+                "Python",
+                "Unity",
+                "VSCode",
+            ]}
+        />
+    </div>
+    <div class="website">This website was created using Svelte and SCSS.</div>
+</div>

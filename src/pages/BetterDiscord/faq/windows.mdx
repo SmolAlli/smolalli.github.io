@@ -1,0 +1,102 @@
+---
+layout: '../../../layouts/OSSeparatedLayout.astro'
+title: 'Frequently Asked Questions'
+og_title: 'Frequently Asked Questions'
+og_desc: 'Frequently Asked Questions in relation to BetterDiscord'
+---
+
+import Details from '../../../components/Details.astro';
+import ExternalLink from '../../../components/ExternalLink.astro';
+
+<Details summary={'"How do I use BetterDiscord?"'}>
+BetterDiscord is an source available platform for people to create and use addons to Discord, to make it the
+best experience for others.
+
+The plugins that are made for BetterDiscord are usually Quality-of-life type add-ons, and there are many themes that
+can be highly customisable, or have been carefully crafted.
+
+If you wish to use BetterDiscord, download it from the <ExternalLink href="https://betterdiscord.app">official website</ExternalLink> and follow the guide <a href="/BetterDiscord/install">here</a>. Then download <ExternalLink href="https://betterdiscord.app/themes">themes</ExternalLink> and <ExternalLink href="https://betterdiscord.app/plugins">plugins</ExternalLink> and add them to BetterDiscord with the guide below.
+
+</Details>
+
+<Details summary={'"How do I install themes and plugins?"'}>
+You can follow the guide <a href="visualptins">here</a> or follow the instructions below:
+
+1\. Download the plugins/themes that you want to from the <ExternalLink href="https://betterdiscord.app">BetterDiscord website</ExternalLink>.
+
+2\. In Discord, go to the settings (<img src="https://i.imgur.com/H1XCRcO.png" alt="Cog icon" class="cog-img" />) and then go to "plugins" or "themes" under the BetterDiscord settings depending on what you wish to install.
+
+3\. Click "Open (Themes/Plugins) Folder".
+
+4\. Move the files into the respective folders.
+
+5\. Enable them back in Discord, by going back to "plugins" or "themes" in settings, and enable them as is shown
+below:
+
+<img src='https://i.imgur.com/g0u2XRJ.png' alt='enable plugins and themes' />
+
+</Details>
+
+<Details summary={'"I use PTB/Canary, where do I install to?"'}>
+On the locations, try changing `Discord` to
+`DiscordCanary` or `DiscordPTB`
+instead.
+
+</Details>
+
+<Details summary={'"How do I uninstall BetterDiscord?"'}>
+You can follow the guide <a href="visualunins">here</a> or follow the instructions below:
+
+1\. Open up the installer (it is recommended to get a new one from the <ExternalLink href="https://betterdiscord.app">BetterDiscord website</ExternalLink>).
+
+2\. Click that you accept the license agreement, then "next". If you cannot do so, click specifically on the text
+next to the checkbox, as is shown below.
+
+<img src='https://i.imgur.com/aIjzoAf.png' alt='Click the text!' />
+
+3\. Click 'uninstall', the bottom location
+
+4\. Allow for it to uninstall
+
+5\. (Optional) Go to your BetterDiscord folder and remove everything from it (can be accessed from `%appdata%/betterdiscord`). You can also delete the installer if you do not wish to use BD anymore.
+
+</Details>
+
+<Details summary={'"Where are my BetterDiscord folders located?"'}>
+Press <kbd>⊞Win</kbd> + <kbd>R</kbd> to open up the "Run" command, then paste in the path that you want to open the folder that you wish to open.
+
+For the BetterDiscord folder:
+
+`%appdata%/betterdiscord`
+
+For the Plugins folder:
+
+`%appdata%/betterdiscord/plugins`
+
+For the Themes folder:
+
+`%appdata%/betterdiscord/themes`
+
+</Details>
+
+<Details summary={'"I get a JavaScript Fatal Error. What do I do?"'}>
+
+1\. Uninstall Discord (press windows button, search 'uninstall' and uninstall from there)
+
+2\. Go to `%localappdata%/discord` and `%appdata%/discord` and delete all files
+
+3\. Reinstall Discord
+
+4\. Check that Discord opens properly
+
+5\. Reinstall BetterDiscord (get a new installer from <ExternalLink href='https://betterdiscord.app'>here</ExternalLink>
+)
+
+</Details>
+
+<Details summary={'"BetterDiscord does not open with Discord. What do I do?"'}>
+This has been answered <a href="/BetterDiscord/install">here</a>. Search for "Install location" and follow the steps listed.
+
+If this does not work, you will have to reinstall Discord.
+
+</Details>

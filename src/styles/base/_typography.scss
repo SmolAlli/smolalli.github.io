@@ -1,0 +1,18 @@
+@use "../abstracts" as *;
+
+:root {
+    font-family: "Lato", sans-serif;
+    @include vendor-prefix("text-justify", "inter-character");
+    font-size: 18px;
+}
+
+.h1 {
+    display: block;
+    font-size: 2em;
+    @include vendor-prefix("margin", "0.67em 0");
+    font-weight: bold;
+}
+
+.group > h2 {
+    @include vendor-prefix("text-align", "center");
+}

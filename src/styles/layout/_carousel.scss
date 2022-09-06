@@ -1,0 +1,98 @@
+@use "../abstracts" as *;
+/* Carousel / Slideshow */
+
+.carousel {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    @include vendor-prefix("aspect-ratio", "1 / 1");
+    @include vendor-prefix("margin", "0 auto");
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    @include vendor-prefix("aspect-ratio", "1 / 1");
+    object-fit: revert;
+}
+
+.carousel-track-container {
+    height: var(--carousel-height);
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track {
+    @include resetPM;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    @include transform-transition(250ms ease-in);
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel .carousel-text {
+    width: 100%;
+    @include vendor-prefix("text-align", "center");
+    height: 44px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 20%;
+    background: transparent;
+    @include vendor-prefix("border", "0px");
+    cursor: pointer;
+}
+
+.carousel-button-left {
+    left: -40px;
+}
+
+.carousel-button-right {
+    right: -40px;
+}
+
+.carousel-button img {
+    width: 20px;
+    height: 20px;
+    @include vendor-prefix("aspect-ratio", "1 / 1");
+    filter: var(--filter);
+}
+
+.carousel-button img:hover {
+    width: 20px;
+    height: 20px;
+    @include vendor-prefix("aspect-ratio", "1 / 1");
+    filter: var(--filter-sec);
+}
+
+.carousel-nav {
+    @include vendor-prefix("padding", "var(--carousel-padding) 0");
+    display: flex;
+    @include vendor-prefix("justify-content", "center");
+}
+
+.carousel-indicator {
+    @include vendor-prefix("border", "0px");
+    @include vendor-prefix("border-radius", "50%");
+    @include vendor-prefix("aspect-ratio", "1 / 1");
+    width: var(--carousel-indicator-height);
+    background: var(--carousel);
+    @include vendor-prefix("margin", "0 10px");
+    cursor: pointer;
+}
+
+.carousel-indicator.current-slide {
+    background: var(--carousel-selected);
+}
+
+.hidden {
+    @include display(none);
+}

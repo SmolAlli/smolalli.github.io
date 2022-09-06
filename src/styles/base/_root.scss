@@ -1,0 +1,32 @@
+@use "../abstracts" as *;
+
+:root {
+    /* Other */
+    --transition-speed: 600ms;
+
+    /* Carousel */
+    --carousel-height: 350px;
+    --carousel-indicator-height: 15px;
+}
+
+@media only screen and (max-width: $screen-width) {
+    :root {
+        --carousel-indicator-height: 10px;
+    }
+
+    main .group .options,
+    #modal .modal-content {
+        flex-direction: column;
+    }
+}
+
+html {
+    position: relative;
+    min-height: calc(100% - var(--nav-height));
+    overflow: hidden;
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+}

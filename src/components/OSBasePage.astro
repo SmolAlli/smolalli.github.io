@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from './Header.astro';
+import OSPages from './OSPages.svelte';
+const pathArray = Astro.url.pathname.split('/');
+const endOfPath = pathArray[pathArray.length - 1];
+const currentPath = `${pathArray[pathArray.length - 2]}/${endOfPath}`;
+---
+
+<Layout>
+    <OSPages client:load currentPage={currentPath} />
+
+    <Header header='Please select an Operating System' />
+
+    <div style='display: flex; width: 100%; justify-content: space-between; margin-top: 1rem;'>
+        <a href={`./${endOfPath}/windows`} class='button'>Windows</a>
+        <a href={`./${endOfPath}/mac`} class='button'>Mac</a>
+        <a href={`./${endOfPath}/linux`} class='button'>Linux</a>
+    </div>
+</Layout>

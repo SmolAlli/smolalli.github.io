@@ -1,0 +1,119 @@
+/* Navbar */
+@use '../abstracts' as *;
+
+/* Small screens (mobile) */
+@media only screen and (max-width: $screen-width) {
+    :root {
+        --padding-num: max(calc((100vw - 500px) / 2), 20px);
+        --main-padding: 0 var(--padding-num);
+        --nav-height: 4rem;
+        --carousel-padding: 0;
+    }
+
+    .link-text {
+        display: none;
+    }
+
+    .nav-item svg {
+        position: absolute;
+        margin-top: 0.5rem;
+        text-align: center;
+        height: 3rem;
+        width: 3rem;
+    }
+}
+
+/* Big screens */
+@media only screen and (min-width: $screen-width) {
+    :root {
+        --padding-num: calc((100vw - 700px) / 2);
+        --main-padding: 0 var(--padding-num);
+        --nav-height: 5rem;
+        --carousel-padding: 20px;
+    }
+
+    .link-text {
+        font-size: 16px;
+        position: absolute;
+        top: calc(var(--nav-height) - 1.5rem);
+        text-align: center;
+    }
+
+    .nav-item:first-child .link-text {
+        display: block;
+    }
+}
+#navbar {
+    --text-primary: var(--light);
+    --text-secondary: white;
+    --nav-secondary: var(--purple2);
+
+    // top: 0;
+    height: var(--nav-height);
+    width: 100vw;
+    position: fixed;
+    background-color: var(--nav-primary);
+    z-index: 5;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: var(--main-padding);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: var(--nav-height);
+}
+
+.nav-item {
+    height: 100%;
+    position: relative;
+    display: flex;
+    width: calc(var(--nav-height) + 2rem);
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition-speed);
+    justify-content: center;
+    background-color: unset;
+
+    &:last-child {
+        margin-left: auto;
+    }
+
+    &:hover {
+        background-color: var(--nav-secondary);
+        color: var(--text-secondary);
+    }
+
+    svg,
+    &:not(.logo) img {
+        position: absolute;
+        margin-top: 1rem;
+        text-align: center;
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .fa-primary {
+        color: var(--text-primary);
+    }
+
+    &:hover .fa-primary {
+        color: var(--text-secondary);
+    }
+}
+
+.logo {
+    background: var(--nav-secondary);
+    height: 100%;
+    margin-right: 2rem;
+    padding: 0;
+    width: var(--nav-height);
+    @include vendor-prefix('aspect-ratio', '1 / 1');
+
+    img {
+        margin: 0.5rem 1.5rem;
+        height: calc(var(--nav-height) - 1rem);
+        width: calc(var(--nav-height) - 1rem);
+    }
+}

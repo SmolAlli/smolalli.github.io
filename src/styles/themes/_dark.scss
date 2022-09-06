@@ -1,0 +1,11 @@
+/* Themes */
+[data-color-mode='dark'] {
+    --text-primary: var(--light);
+    --text-secondary: var(--white);
+    --bg-colour: var(--purple4);
+    --carousel: rgba(209, 215, 224, 0.3);
+    --carousel-selected: rgba(209, 215, 224, 0.75);
+    --filter: invert(94%) sepia(6%) saturate(284%) hue-rotate(177deg) brightness(93%) contrast(89%);
+    --filter-sec: invert(100%) sepia(100%) saturate(0%) hue-rotate(207deg) brightness(102%) contrast(102%);
+    $bg: rgb(25, 17, 30);
+}

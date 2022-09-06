@@ -1,0 +1,14 @@
+---
+    const {groupname, groups} = Astro.props;
+---
+
+<div class="group">
+    <h2>{groupname}</h2>
+    <div class="options">
+        {groups.map((group) => {
+            return (<a href={`/BetterDiscord/${group.href}`} class="button">
+                {group.text}
+            </a>);
+        })}
+    </div>
+</div>

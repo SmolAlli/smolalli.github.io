@@ -1,0 +1,32 @@
+---
+layout: '../../../layouts/OSSeparatedLayout.astro'
+title: 'Vanilla Command'
+og_title: 'Vanilla Command'
+og_desc: 'BetterDiscord Guide for using the --vanilla command'
+---
+
+SmolAlli's guide to using the vanilla command to get access to regular Discord temporarily.
+
+To restore: Close down Discord completely, then re-open it.
+
+### How to use the `--vanilla` command:
+
+1\. Close Discord
+
+2\. Press <kbd>⊞Win</kbd> + <kbd>R</kbd>
+
+3\. Paste ` %localappdata%\Discord\app-1.0.9006\d iscord.exe --vanilla ` into the chatbox that appears
+
+### Vanilla Discord Desktop shortcut:
+
+1\. On the desktop, right click, choose "New" and then "Create Shortcut"
+
+2\. You can either create a shortcut that stops Discord then re-opens it (a), or just opens it (b).
+
+&nbsp;&nbsp;&nbsp;&nbsp;a. Paste into the filepath `powershell.exe Stop-Process -Name Discord; start %USERPROFILE%\AppData\Local\Discord\app-1.0.9006\Discord.exe --vanilla`
+
+&nbsp;&nbsp;&nbsp;&nbsp;b. Paste into the filepath `powershell.exe start %USERPROFILE%\AppData\Local\Discord\app-1.0.9006\Discord.exe --vanilla`
+
+3\. Choose a name for the shortcut, and voila! A shortcut.
+
+4\. (optional): You can get the icon that Discord uses from `%USERPROFILE%\AppData\Local\Discord\app.ico` so that the shortcut looks good.

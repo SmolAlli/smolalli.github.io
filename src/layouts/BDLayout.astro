@@ -1,0 +1,35 @@
+---
+import ColorMode from "@julian_cataldo/astro-color-mode/ColorMode.astro";
+
+import "../styles/index.scss";
+import Navbar from "../components/Navbar.astro";
+import HomeButton from "../components/HomeButton.astro";
+import Header from "../components/Header.astro";
+
+const { title, og_title, og_desc } = Astro.props.frontmatter || Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <ColorMode />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <meta name="generator" content={Astro.generator} />
+        <meta
+            content={`BetterDiscord Guides - ${og_title}`}
+            property="og:title"
+        />
+        <meta content={og_desc} property="og:description" />
+        <title>BetterDiscord Guides - {title}</title>
+    </head>
+    <body>
+        <Navbar />
+        <main>
+            <Header header={title}/>
+            <slot />
+            <HomeButton />
+        </main>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+@use '../abstracts' as *;
+
+[data-color-mode='light'] {
+    --bg: rgba(209, 215, 224, 0.9);
+}
+
+[data-color-mode='dark'] {
+    --bg: rgba(56, 36, 68, 0.9);
+}
+
+$base-duration: 500ms;
+.modal {
+    #background {
+        position: fixed;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @include vendor-prefix('aspect-ratio', '1 / 1');
+        overflow: hidden;
+        background-color: #000;
+        @include vendor-prefix('opacity', '0');
+        transition: opacity calc($base-duration) ease;
+    }
+    #modal {
+        position: fixed;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        @include vendor-prefix('transform', 'translate(-50%, -50%)');
+        background-color: var(--bg);
+        @include vendor-prefix('opacity', '0');
+        transition: opacity calc($base-duration) ease;
+        @include vendor-prefix('padding', '10px 20px');
+        @include vendor-prefix('border-radius', '3.5px');
+        @include vendor-prefix('border', '5px solid var(--purple2)');
+        display: flex;
+    }
+
+    .modal-content {
+        text-align: center;
+
+        .options {
+            flex-wrap: wrap;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+
+    &.active {
+        #background {
+            @include vendor-prefix('opacity', '0.7');
+        }
+        #modal {
+            @include vendor-prefix('opacity', '1');
+        }
+    }
+
+    .back.button {
+        @include vendor-prefix('margin-right', '2ch');
+        top: 2ch;
+    }
+}

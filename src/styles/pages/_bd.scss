@@ -1,0 +1,186 @@
+@use 'sass:map';
+@use '../abstracts' as *;
+@use '../themes' as *;
+section {
+    @include display(block);
+    background-color: var(--bg-colour);
+    position: absolute;
+    width: 100%;
+    @include vendor-prefix('box-sizing', 'border-box');
+    @include vendor-prefix('opacity', '1');
+    @include vendor-prefix('padding', 'var(--main-padding)');
+    top: var(--nav-height);
+    overflow: auto;
+    height: 100%;
+}
+
+details,
+code {
+    @include vendor-prefix('border-radius', '10px');
+    @include vendor-prefix('padding', '1px 5px');
+}
+
+[data-color-mode='dark'] details,
+[data-color-mode='dark'] code {
+    background-color: rgba(map.get($purples, 3), 0.75);
+    @include vendor-prefix('border', '1px solid var(--lighter-grey)');
+}
+
+[data-color-mode='light'] details,
+[data-color-mode='light'] code {
+    background-color: rgba(map.get($purples, 1), 0.5);
+    @include vendor-prefix('border', '1px solid var(--darker-grey)');
+}
+
+p {
+    line-height: 110%;
+}
+
+code {
+    line-height: 150%;
+    @include vendor-prefix('box-decoration-break', 'clone');
+    word-break: break-all;
+}
+
+summary {
+    cursor: pointer;
+    font-size: 1.17em;
+    @include vendor-prefix('margin', '0.25em 0');
+    font-weight: bold;
+}
+
+.group {
+    .options {
+        line-height: 5ex;
+        display: flex;
+        @include vendor-prefix('flex-direction', 'row');
+        @include vendor-prefix('flex-wrap', 'wrap');
+        @include vendor-prefix('justify-content', 'center');
+        filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.3));
+    }
+
+    .options.double {
+        @include vendor-prefix('margin', '0 12.5ex');
+    }
+}
+
+.button {
+    @include vendor-prefix('flex', '1');
+    max-width: 50ex;
+    @include vendor-prefix('margin', '1ex');
+    @include vendor-prefix('text-decoration', 'none');
+    @include vendor-prefix('text-align', 'center');
+    background-color: var(--purple2);
+    color: var(--white);
+    font-weight: bold;
+    @include vendor-prefix('padding', '0.25ex 2ex 0.25ex 2ex');
+    white-space: nowrap;
+    display: inline-block;
+    @include vendor-prefix('transform-origin', 'bottom');
+    @include transform-transition('0.1s ease-out, background-color 0.1s ease-out');
+    position: relative;
+    text-overflow: none;
+    @include vendor-prefix('border-radius', '3.5px');
+}
+
+.button:hover {
+    @include vendor-prefix('text-decoration', 'none');
+    background-color: var(--purple1);
+    @include vendor-prefix('transform', 'translateY(-0.2ch) translateZ(0.45ex)');
+}
+
+.back.button {
+    position: absolute;
+    top: 0.5ch;
+    right: 0;
+    @include vendor-prefix('margin-right', ' var(--padding-num)');
+}
+
+input[type='text'] {
+    display: block;
+    width: 100%;
+    @include vendor-prefix('padding', '8px');
+    background-color: rgba(map.get($purples, 2), 0.25);
+    color: var(--light);
+    @include vendor-prefix('border-radius', '5px');
+    @include vendor-prefix('padding', '1px 5px');
+    @include vendor-prefix('border', '1px solid var(--lighter-grey)');
+}
+
+input[type='text']:focus {
+    @include vendor-prefix('border-color', 'var(--light)');
+    outline: none;
+}
+
+[data-color-mode='dark'] .choices ul:not(.tab) > li {
+    background-color: var(--purple3);
+}
+
+[data-color-mode='light'] .choices ul:not(.tab) > li {
+    background-color: var(--lighter-grey);
+}
+
+.choices {
+    ul.tab {
+        display: inline-flex;
+        @include vendor-prefix('justify-content', 'none');
+    }
+
+    ul:not(.tab) {
+        display: flex;
+        @include vendor-prefix('justify-content', 'space-evenly');
+        @include vendor-prefix('margin', '0 10%');
+    }
+
+    ul,
+    li {
+        @include vendor-prefix('margin', '0');
+        @include vendor-prefix('padding', '0');
+        text-indent: 0;
+        list-style-type: none;
+    }
+
+    .options {
+        background-color: transparent;
+        @include vendor-prefix('margin', '5px');
+        color: var(--light);
+    }
+
+    .options.active {
+        @include vendor-prefix('border-bottom', 'var(--purple1) 1px solid');
+    }
+
+    .choice {
+        display: none;
+    }
+
+    .choice.active {
+        display: block;
+        @include vendor-prefix('margin-top', '10px');
+    }
+
+    &.tabs {
+        background-color: rgba(map.get($purples, 3), 0.75);
+        @include vendor-prefix('padding', '5px');
+        @include vendor-prefix('border-radius', '5px');
+
+        ul {
+            background-color: transparent;
+        }
+    }
+}
+
+.OS-specific-page {
+    .page {
+        display: none;
+    }
+    &.windows .windows {
+        display: block;
+    }
+    &.mac .mac {
+        display: block;
+    }
+    &.linux .linux {
+        display: block;
+    }
+}

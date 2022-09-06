@@ -1,0 +1,22 @@
+---
+layout: '../../../../layouts/OSSeparatedLayout.astro'
+title: 'Installing BetterDiscord Issues'
+og_title: 'Installing BetterDiscord Issues'
+og_desc: 'Issues relating to installing BetterDiscord.'
+---
+
+import Details from '../../../../components/Details.astro';
+
+<Details summary="No install path OR BetterDiscord not installed after using installer">
+If you do not have a path to the Discord folder to install BetterDiscord into, then press "browse" and then <kbd>⌘Command</kbd> + <kbd>Shift</kbd> + <kbd>G</kbd>, then paste <code>/Applications/Discord/Contents/Resources</code> into the popup that appears.
+</Details>
+
+<Details summary="Installer does not open">
+For the popup of "Developer cannot be verified", you can either:
+
+Click on the <kbd>?</kbd> icon at the top right of the popup
+
+Go to system preferences, go to the security and privacy tab, then select "general" and click the padlock &#128274; at the bottom right, and log in. Then in the "Allow apps downloaded from:" section, select "anywhere." <a href="https://it.nmu.edu/docs/allowing-third-party-applications-install-macbook">Link to a guide here.</a>
+
+If the issue listed above was not your problem, then try <a href="/BetterDiscord/manual/mac">manually installing BetterDiscord</a>.
+</Details>

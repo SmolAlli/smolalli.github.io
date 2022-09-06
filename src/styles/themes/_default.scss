@@ -1,0 +1,26 @@
+@use 'sass:map';
+@use '../abstracts' as *;
+
+:root {
+    --purple1: #{map.get($purples, 1)};
+    --purple2: #{map.get($purples, 2)};
+    --purple3: #{map.get($purples, 3)};
+    --purple4: #{map.get($purples, 4)};
+    --white: #{map.get($greys, 1)};
+    --light: #{map.get($greys, 2)};
+    --lighter-grey: #{map.get($greys, 3)};
+    --darker-grey: #{map.get($greys, 4)};
+    --dark: #{map.get($greys, 5)};
+    --black: #{map.get($greys, 6)};
+
+    --nav-primary: var(--purple3);
+}
+
+.theme-icon {
+    display: none;
+}
+
+[data-color-mode='dark'] #darkIcon,
+[data-color-mode='light'] #lightIcon {
+    display: block;
+}

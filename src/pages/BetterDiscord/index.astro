@@ -1,0 +1,44 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import GroupButtons from '../../components/GroupButtons.astro';
+import Header from '../../components/Header.astro';
+---
+
+<Layout
+    title='BetterDiscord Guides' og_title='BetterDiscord Guides' og_desc='Step by step instructions for performing common tasks and solving common problems.' >
+    <Header header='BetterDiscord Support' />
+
+    <GroupButtons
+        groupname='Help'
+        groups={[
+            { href: 'install', text: 'Installer' },
+            { href: 'crash', text: 'Crashes' },
+            { href: 'support', text: 'Need support?'},
+        ]}
+    />
+    <GroupButtons
+        groupname='Visual Guides'
+        groups={[
+            { href: 'v-install', text: 'Install' },
+            { href: 'v-addons', text: 'Install Themes/Plugins' },
+            { href: 'v-uninstall', text: 'Uninstall' },
+        ]}
+    />
+    <GroupButtons
+        groupname='Guides'
+        groups={[
+            { href: 'manual', text: 'Manual Installation' },
+            { href: 'vanilla', text: 'Vanilla Commands' },
+            { href: 'faq', text: 'FAQ' },
+        ]}
+    />
+    <GroupButtons
+        groupname='Other'
+        groups={[
+            { href: 'submit', text: 'Submissions' },
+            { href: 'links', text: 'Helpful Links' },
+            { href: 'credit', text: 'Credit' },
+        ]}
+    />
+    <br />
+</Layout>

@@ -1,0 +1,115 @@
+@use '../abstracts' as *;
+
+:root {
+    --area-height: 75%;
+}
+
+%flex-main-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+%absolute {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    padding: 5vw 0;
+}
+
+.front-main {
+    @extend %flex-main-area, %absolute;
+    margin-top: 5vw;
+
+    background-color: rgba(56, 36, 68, 0.5);
+
+    /* Split the screen in half */
+    .left,
+    .right {
+        height: var(--area-height);
+
+        /* If you want the content centered horizontally and vertically */
+        .centred {
+            text-align: left;
+
+            img {
+                width: 250px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    /* Control the left side */
+    .left {
+        width: 40%;
+        p {
+            font-size: 20px;
+        }
+    }
+
+    /* Control the right side */
+    .right {
+        width: auto;
+    }
+}
+
+.skills {
+    top: var(--area-height);
+    @extend %absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+
+    .container {
+        top: 100px;
+        @extend %flex-main-area;
+        height: fit-content;
+        padding: 10px min(50px, 5rem);
+        top: -50px;
+
+        .skill {
+            text-align: center;
+            color: #ffffff;
+            border-radius: 20px;
+            padding: 10px 15px;
+            margin: 1rem;
+            text-decoration: none;
+            width: 150px;
+            height: fit-content;
+            block-size: fit-content;
+            flex: 1 0 13%;
+        }
+    }
+    .website {
+        @extend %flex-main-area;
+        height: fit-content;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: $screen-width) {
+    .front-main {
+        .left {
+            width: 85%;
+        }
+        .right {
+            width: 200px;
+        }
+        margin-top: 5vh;
+    }
+
+    .skills {
+        .container .skill {
+            flex: unset;
+        }
+        margin-top: 5vh;
+    }
+
+    .website {
+        width: 85%;
+    }
+}

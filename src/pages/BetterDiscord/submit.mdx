@@ -1,0 +1,70 @@
+---
+layout: '../../layouts/BDLayout.astro'
+title: 'Submitting Themes and Plugins'
+og_title: 'Submissions'
+og_desc: 'Information on how to submit add-ons to the BetterDiscord website.'
+---
+
+import Details from '../../components/Details.astro';
+import ExternalLink from '../../components/ExternalLink.astro';
+
+<Details summary='Submission Process'>
+Submitting themes and plugins is done on the <ExternalLink href='https://betterdiscord.app'>BetterDiscord website</ExternalLink>. Steps to
+submit:
+
+1\. Go to the BetterDiscord website, and go to the Themes page to submit themes, or the Plugins page to submit
+plugins.
+
+2\. Connect your Discord account to the website from the top right, by clicking "Connect" button as is shown here:
+
+<img src='https://i.imgur.com/HAJTNlF.png' alt='Connect' />
+
+3\. Click on the `Submit a theme` or `Submit a plugin` on the respective page.
+
+<img src='https://i.imgur.com/G7A2I4j.png' alt='Submit a theme' />
+
+4\. Add your Github account on the modal that pops up.
+
+5\. Once the Github account has been connected, please wait at least 2 days for the repository to be accepted. If you
+do not follow the guidelines listed below, you will NOT have your add-on accepted.
+
+6\. If your account is accepted, you will then be able to use the same submission button in step 3 to submit the
+add-on you wish to. This will then be verified by the BetterDiscord team.
+
+</Details>
+
+<Details summary='Submission Guidelines'>
+#### General
+
+-   All addons must be in public GitHub repositories.
+-   All addons must not negatively affect users.
+-   All addons must not target specific users or groups.
+-   All addons must not collect user data without opt-in consent.
+
+#### Themes
+
+-   Themes must only use @import with Google Fonts or GitHub. This does allow for GitHub-related CDNs as well as GitHub pages.
+-   Themes must not abuse GitHub's raw links for @import statements.
+
+#### Plugins
+
+-   Plugins must not introduce new remote libraries. Existing remote libraries can still be used, but are officially deprecated to be disallowed in the future.
+    \- Plugins must not be obfuscated and/or deceitful.
+    \- Plugins must not modify globals or existing prototypes.
+    \- Plugins must not use BD globals outside of BdApi.
+-   Plugins must not attempt to modify the BD UI. This is partially for consistency and partially to decrease the number of render issues caused by plugins.
+-   Plugins and their corresponding libraries shall not operate outside of their intended functionality. This includes but is not limited to swapping out components unrelated to the plugin, introducing additional buttons, badges or other unrelated elements.
+-   Plugins must not make use of or read user tokens, emails, or passwords.
+
+Source from <ExternalLink href='https://github.com/BetterDiscord/BetterDiscord/wiki/Addon-Policies'>BetterDiscord's Addons Policies page</ExternalLink>
+
+</Details>
+
+<Details summary='How to create add-ons'>
+Details on how to create add-ons, such as the META and creation guides specfic to themes and plugins, are available <a href='https://github.com/BetterDiscord/BetterDiscord/wiki'>here</a>.
+
+A <ExternalLink href='https://gist.github.com/Jiiks/7b51de08cb8118682df8'>theme</ExternalLink> and <ExternalLink href='https://gist.github.com/rauenzi/e5f4d02fc3085a53872b0236cd6f8225'>plugin</ExternalLink> example has also been created, to help with getting started with the basics.
+
+If you are in need of assistance with the creation of themes or plugins, please go to the <a href='https://betterdiscord.app/invite'>Discord server</a> and ask in `#custom-css` for help with creating themes, and `#programming` for help with creating plugins.
+
+</Details>

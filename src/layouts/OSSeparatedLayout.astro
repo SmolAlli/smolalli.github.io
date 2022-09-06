@@ -1,0 +1,45 @@
+---
+import ColorMode from "@julian_cataldo/astro-color-mode/ColorMode.astro";
+
+const { title, og_title, og_desc } = Astro.props.frontmatter || Astro.props;
+
+import "../styles/index.scss";
+import Navbar from "../components/Navbar.astro";
+import HomeButton from "../components/HomeButton.astro";
+import Header from "../components/Header.astro";
+
+const pathnameArray = Astro.url.pathname.split("/");
+// const pathname = pathnameArray[pathnameArray.length - 2];
+const currOS = pathnameArray[pathnameArray.length - 1];
+const currOSCapitalised = currOS.charAt(0).toUpperCase() + currOS.slice(1);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<ColorMode />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<meta
+            content={`BetterDiscord Guides - ${og_title}`}
+            property="og:title"
+        />
+        <meta content={og_desc} property="og:description" />
+        <title>BetterDiscord Guides - {title}</title>
+	</head>
+	<body>
+		<Navbar />
+		<main>
+            <Header header={`${title} - ${currOSCapitalised}`} />
+            <div style="display: flex; width: 100%; justify-content: space-between; margin-top: 1rem;">
+                <a href="windows" class="button">Windows</a>
+                <a href="mac" class="button">Mac</a>
+                <a href="linux" class="button">Linux</a>
+            </div>
+            <slot />
+            <HomeButton />
+        </main>
+	</body>
+</html>

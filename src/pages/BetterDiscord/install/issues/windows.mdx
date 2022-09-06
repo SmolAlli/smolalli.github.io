@@ -1,0 +1,53 @@
+---
+layout: '../../../../layouts/OSSeparatedLayout.astro'
+title: 'Installing BetterDiscord Issues'
+og_title: 'Installing BetterDiscord Issues'
+og_desc: 'Issues relating to installing BetterDiscord.'
+---
+
+import Details from '../../../../components/Details.astro';
+import ExternalLink from '../../../../components/ExternalLink.astro';
+
+<Details summary="No install path OR BetterDiscord not installed after using installer">
+If you do not have a path to the Discord folder to install BetterDiscord into, or BetterDiscord did not show after installing, then press "browse" and paste <code> %localappdata%/discord/app-1.0.9006/resources</code> into the top bar.
+
+If you do not know how to do that, look to the video below.
+
+If BetterDiscord is still not on your Discord after installing, then use the path <code>%programdata%/%username%/Discord/app-1.0.9006/resources</code>.
+
+If neither of these work, reinstall Discord and try again.
+
+This is shown below:
+
+<img
+    src="https://cdn.discordapp.com/attachments/542030029861814284/863124888974000198/programdata.gif"
+    alt="BetterDiscord Settings" />
+</Details>
+
+<Details summary="Installer does not open">
+If the installer seems to not want to open at all, then follow these instructions:
+
+1\. Download and install <ExternalLink href="https://7-zip.org"> 7-zip</ExternalLink> (if you do not have it already)
+
+2\. Create a new folder (can be anywhere)
+
+3\. Right click on the BetterDiscord.exe file, and from the 7zip options, choose 'extract to...' and
+choose the folder you just created
+
+4\. Use the exe file in the folder you extracted to.
+
+If this does not work, then try the <ExternalLink href="https://github.com/BetterDiscord/Installer/releases/download/v1.0.0-hotfix/BetterDiscord-Windows.exe">hotfix</ExternalLink>.
+
+If none of these solutions solved your problem, then try <a href="/BetterDiscord/manual/windows">manually installing BetterDiscord</a>
+</Details>
+
+<Details summary="Installer shows black instead of opening">
+    If you get a black screen, try the following:
+
+1\. Disable your AntiVirus.
+
+2\. Press <kbd>⊞Win</kbd> + <kbd>R</kbd> and paste <code>ipconfig /flushdns</code>
+
+3\. If that doesn't work, try to restart your computer, or try the hotfix linked above.
+</Details>
+
