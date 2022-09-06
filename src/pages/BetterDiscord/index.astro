@@ -2,10 +2,12 @@
 import Layout from '../../layouts/Layout.astro';
 import GroupButtons from '../../components/GroupButtons.astro';
 import Header from '../../components/Header.astro';
+import OldWebsiteToNew from "../../components/OldWebsiteToNew.svelte";
 ---
 
 <Layout
     title='BetterDiscord Guides' og_title='BetterDiscord Guides' og_desc='Step by step instructions for performing common tasks and solving common problems.' >
+    <OldWebsiteToNew client:load />
     <Header header='BetterDiscord Support' />
 
     <GroupButtons

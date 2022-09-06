@@ -23,7 +23,7 @@
         console.log(currOS);
         console.log(currentPage);
 
-        currOS != null && window.location.replace(`../${currentPage}/${currOS}`);
+        currOS != null && window.location.replace(`${currentPage}/${currOS}`);
     });
 
     // change this to just make an automatic assumption based off of what OS the user actually has - much easier.
