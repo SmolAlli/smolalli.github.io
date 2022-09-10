@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from './Header.astro';
 import OSPages from './OSPages.svelte';
 const path = Astro.url.pathname;
+const pathNoOS = path.split("/").filter((w)=> !w.includes("windows") || !w.includes("mac") || !w.includes("linux")).join("/");
 ---
 
 <Layout>
@@ -11,9 +12,8 @@ const path = Astro.url.pathname;
     <Header header='Please select an Operating System' />
 
     <div style='display: flex; width: 100%; justify-content: space-between; margin-top: 1rem;'>
-        <a href={`${path}/windows`} class='button'>Windows</a>
-        <a href={`${path}/mac`} class='button'>Mac</a>
-        <a href={`${path}/linux`} class='button'>Linux</a>
+        <a href={`${pathNoOS}/windows`} class='button'>Windows</a>
+        <a href={`${pathNoOS}/mac`} class='button'>Mac</a>
+        <a href={`${pathNoOS}/linux`} class='button'>Linux</a>
     </div>
-    {path}
 </Layout>
