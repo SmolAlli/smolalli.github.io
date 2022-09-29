@@ -1,6 +1,9 @@
 <script>
-    export let input =
-        'git clone https://github.com/BetterDiscord/BetterDiscord.git && cd ./BetterDiscord/ && npm i && npm run build && npm run inject';
+    export let replace;
+
+    let input =
+        'git clone https://github.com/BetterDiscord/BetterDiscord.git && cd ./BetterDiscord/ && npm install -g pnpm && pnpm i && pnpm run build && pnpm run inject';
+    if (replace) input = input.replace(' && ', replace);
 </script>
 
 <input type="text" value={input} readonly id="copy" />
