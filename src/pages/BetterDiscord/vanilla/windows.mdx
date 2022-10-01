@@ -5,6 +5,9 @@ og_title: 'Vanilla Command'
 og_desc: 'BetterDiscord Guide for using the --vanilla command'
 ---
 
+import Tabs from "../../../components/Tabs.svelte"
+import CopyInput from "../../../components/CopyInput.astro"
+
 SmolAlli's guide to using the vanilla command to get access to regular Discord temporarily.
 
 To restore: Close down Discord completely, then re-open it.
@@ -21,12 +24,13 @@ To restore: Close down Discord completely, then re-open it.
 
 1\. On the desktop, right click, choose "New" and then "Create Shortcut"
 
-2\. You can either create a shortcut that stops Discord then re-opens it (a), or just opens it (b).
+2\. Copy and paste the following code into the filepath field, depending on what you want to have the shortcut do.
 
-&nbsp;&nbsp;&nbsp;&nbsp;a. Paste into the filepath `powershell.exe Stop-Process -Name Discord; start %USERPROFILE%\AppData\Local\Discord\app-1.0.9006\Discord.exe --vanilla`
+<Tabs client:load tabs={['Restart Discord with no BD', 'Open an already closed Discord with no BD']}>
+    <div class="choice active">
+        <CopyInput input="powershell.exe Stop-Process -Name Discord; start %USERPROFILE%/AppData/Local/Discord/app-1.0.9006/Discord.exe --vanilla" />
+    </div>
+    <div class="choice"><CopyInput input="powershell.exe start %USERPROFILE%/AppData/Local/Discord/app-1.0.9006/Discord.exe --vanilla" /></div>
+</Tabs>
 
-&nbsp;&nbsp;&nbsp;&nbsp;b. Paste into the filepath `powershell.exe start %USERPROFILE%\AppData\Local\Discord\app-1.0.9006\Discord.exe --vanilla`
-
-3\. Choose a name for the shortcut, and voila! A shortcut.
-
-4\. (optional): You can get the icon that Discord uses from `%USERPROFILE%\AppData\Local\Discord\app.ico` so that the shortcut looks good.
+3\. Choose a name for the shortcut. You can also get the icon that Discord uses from `%USERPROFILE%/AppData/Local/Discord/app.ico`.

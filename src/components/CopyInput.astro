@@ -1,0 +1,21 @@
+---
+export interface Props {
+    replace?: null | string;
+    input?: string;
+}
+let {replace, input = 'git clone https://github.com/BetterDiscord/BetterDiscord.git && cd ./BetterDiscord/ && npm install -g pnpm && pnpm i && pnpm run build && pnpm run inject'} = Astro.props;
+
+if (replace) input = input.replace(' && ', replace);
+---
+
+<input type="text" value={input} readonly id="copy" />
+<button
+    onclick="
+    let elem = this.previousElementSibling;
+    elem.select();
+    elem.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(elem.value);
+    "
+    class="button"
+    >Click here to copy
+</button>
