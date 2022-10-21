@@ -7,13 +7,14 @@ og_desc: 'Issues relating to installing BetterDiscord.'
 
 import Details from '../../../../components/Details.astro';
 import ExternalLink from '../../../../components/ExternalLink.astro';
+import {whn} from "../../../../components/Constants";
 
 <Details summary="No install path OR BetterDiscord not installed after using installer">
-If you do not have a path to the Discord folder to install BetterDiscord into, or BetterDiscord did not show after installing, then press "browse" and paste <code> %localappdata%/discord/app-1.0.9007/resources</code> into the top bar.
+If you do not have a path to the Discord folder to install BetterDiscord into, or BetterDiscord did not show after installing, then press "browse" and paste <code> %localappdata%/discord/app-{whn}/resources</code> into the top bar.
 
 If you do not know how to do that, look to the video below.
 
-If BetterDiscord is still not on your Discord after installing, then use the path <code>%programdata%/%username%/Discord/app-1.0.9007/resources</code>.
+If BetterDiscord is still not on your Discord after installing, then use the path <code>%programdata%/%username%/Discord/app-{whn}/resources</code>.
 
 If neither of these work, reinstall Discord and try again.
 
