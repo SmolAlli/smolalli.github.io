@@ -5,7 +5,7 @@ export interface Props {
 }
 let {replace, input = 'git clone https://github.com/BetterDiscord/BetterDiscord.git && cd ./BetterDiscord/ && npm install -g pnpm && pnpm i && pnpm run build && pnpm run inject'} = Astro.props;
 
-if (replace) input = input.replace(' && ', replace);
+if (replace) input = input.replace(/ && /g, replace);
 ---
 
 <input type="text" value={input} readonly id="copy" />
