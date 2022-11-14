@@ -11,12 +11,21 @@
   },
   "devDependencies": {
     "@astrojs/mdx": "^0.10.2",
+    "@astrojs/react": "^1.2.2",
     "@astrojs/svelte": "^1.0.0",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.8",
     "astro": "^1.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "svelte": "^3.49.0"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.3.7",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@julian_cataldo/astro-color-mode": "^0.11.5",
-    "sass": "^1.54.5"
+    "react-router-dom": "^6.4.3",
+    "sass": "^1.56.1"
   }
 }
