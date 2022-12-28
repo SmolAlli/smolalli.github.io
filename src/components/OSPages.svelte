@@ -12,7 +12,8 @@
         plat = window.navigator.platform.toLowerCase();
         if (!currOS) {
             optNames.forEach((os) => {
-                if (plat.includes(os)) {
+                // Make sure not to automatically redirect on android devices
+                if (plat.includes(os) && !plat.includes('arch')) {
                     currOS = os;
                 }
             });
