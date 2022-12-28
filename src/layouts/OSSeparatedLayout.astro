@@ -8,9 +8,10 @@ import Navbar from "../components/Navbar.astro";
 import HomeButton from "../components/HomeButton.astro";
 import Header from "../components/Header.astro";
 
-const pathnameArray = Astro.url.pathname.split("/");
-// const pathname = pathnameArray[pathnameArray.length - 2];
-const currOS = pathnameArray[pathnameArray.length - 1];
+const osPages = ["windows", "mac", "linux"]
+const path = Astro.url.pathname.split("/");
+const pathNoOS = path.filter((w)=> !osPages.some(os => w.includes(os))).join("/");
+const currOS = path[path.length - 1];
 const currOSCapitalised = currOS.charAt(0).toUpperCase() + currOS.slice(1);
 ---
 
@@ -34,9 +35,9 @@ const currOSCapitalised = currOS.charAt(0).toUpperCase() + currOS.slice(1);
 		<main>
             <Header header={`${title} - ${currOSCapitalised}`} />
             <div style="display: flex; width: 100%; justify-content: space-between; margin-top: 1rem;">
-                <a href="windows" class="button">Windows</a>
-                <a href="mac" class="button">Mac</a>
-                <a href="linux" class="button">Linux</a>
+                <a href={`${pathNoOS}/windows`} class="button">Windows</a>
+                <a href={`${pathNoOS}/mac`} class="button">Mac</a>
+                <a href={`${pathNoOS}/linux`} class="button">Linux</a>
             </div>
             <slot />
             <HomeButton />
