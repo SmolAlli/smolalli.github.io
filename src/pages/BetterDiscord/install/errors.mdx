@@ -1,14 +1,14 @@
 ---
 layout: '../../../layouts/BDLayout.astro'
-title: 'Crashes'
-og_title: 'Crashes'
-og_desc: 'Step by step instructions for diagnosing and fixing crashes from plugins.'
+title: 'Installer Errors'
+og_title: 'Installer Errors'
+og_desc: 'Step by step instructions for diagnosing and fixing errors given by the installer.'
 ---
 
 import Details from '../../../components/Details.astro';
 import ExternalLink from '../../../components/ExternalLink.astro';
 
-These are specifically for error which occur while installing BetterDiscord. If you have an issue like the installer not opening, go to<a href="issues">this link</a>
+These are specifically for error which occur while installing BetterDiscord. If you have an issue like the installer not opening, go to <a href="issues">this link</a>
 
 If you are unsure of how to use the installer, or get stuck, go to <a href="/BetterDiscord/install">this link</a>
 
@@ -33,19 +33,25 @@ You have an old installer that is not getting the asar file from the new GitHub 
 </Details>
 
 <Details summary={'"&#10060; EACCES: permission denied, mkdir", or any error where at "shims" there is a "mkdir" error'}>
-Your install of Discord is corrupted, and you will need to redownload Discord. Help can be found <ExternalLink href="https://discordtips.com/how-to-fully-uninstall-discord/">here</ExternalLink>
+
+If you have MacOS 13 (Ventura) or higher: Follow this guide to give Full Disk Access to the installer <ExternalLink href="https://www.howtoisolve.com/full-disk-access-full-permissions-on-mac/">here</ExternalLink>
+
+
+Otherwise, you should fully reinstall Discord. Follow the guide <ExternalLink href="https://discordtips.com/how-to-fully-uninstall-discord/">here</ExternalLink>
 </Details>
 
 <Details summary={'"&#10060; Cannot read property "hasOwnProperty" of undefined" error'}>
 There are quite a few things that could be causing this issue.
 
-1\. Get a new installer from <ExternalLink href="https://betterdiscord.app">the BetterDiscord website</ExternalLink>. Delete any that you have before this.
+1\. Temporarily uninstall Roblox if you have the game.
 
-2\. Either change your location on a VPN you are using to the US if you are outside of America (mainly China or other places where activity is limited), or disable your VPN, Proxy, AntiVirus or Firewall.
+2\. Get a new installer from <ExternalLink href="https://betterdiscord.app">the BetterDiscord website</ExternalLink>. Delete any that you have before this.
 
-3\. Try again with the Discord application closed.
+3\. Either change your location on a VPN you are using to the US if you are outside of America (mainly China or other places where activity is limited), or disable your VPN, Proxy, AntiVirus or Firewall.
 
-4\. Fully reinstall Discord. Help can be found <ExternalLink href="https://discordtips.com/how-to-fully-uninstall-discord/">here</ExternalLink>
+4\. Try again with the Discord application closed.
+
+5\. Fully reinstall Discord. Help can be found <ExternalLink href="https://discordtips.com/how-to-fully-uninstall-discord/">here</ExternalLink>
 </Details>
 
 <Details summary={'"&#10060; getaddrinfo ENOTFOUND api.github.com"'}>
