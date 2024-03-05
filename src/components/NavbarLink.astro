@@ -5,15 +5,10 @@ export interface Props {
     isExternal?: boolean;
 }
 
-const { href, text, isExternal = false } = Astro.props as Props;
+const { href, text, isExternal = true } = Astro.props as Props;
 ---
 
-<a
-    class="nav-item"
-    href={href}
-    target={isExternal ? "_blank" : null}
-    rel={isExternal ? "noopener noreferrer" : null}
->
+<a class="nav-item" href={href} target={isExternal ? '_blank' : null} rel={isExternal ? 'noopener noreferrer' : null}>
     <slot />
     <span class="link-text">{text}</span>
 </a>
