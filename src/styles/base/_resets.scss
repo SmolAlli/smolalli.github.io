@@ -44,7 +44,7 @@ img {
 /* Main area for the page */
 main {
     @include vendor-prefix("padding", "var(--main-padding)");
-    top: var(--nav-height);
+    // top: var(--nav-height);
     position: absolute;
     width: 100%;
     height: 100%;

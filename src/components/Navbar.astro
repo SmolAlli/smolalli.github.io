@@ -1,16 +1,13 @@
 ---
-import NavbarLink from "./NavbarLink.astro";
+import NavbarLink from './NavbarLink.astro';
 ---
 
 <nav id="navbar" class="navbar-main">
     <div class="navbar-nav">
         <a class="nav-item logo" href="/">
-            <img
-                src="https://avatars.githubusercontent.com/u/22519967"
-                alt="SmolAlli"
-            />
+            <img src="https://avatars.githubusercontent.com/u/22519967" alt="SmolAlli" />
         </a>
-        <NavbarLink href="/BetterDiscord/" text="BetterDiscord">
+        <NavbarLink href="https://docs.betterdiscord.app/" text="BetterDiscord">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
                 <g class="fa-group">
                     <path
@@ -25,11 +22,7 @@ import NavbarLink from "./NavbarLink.astro";
             </svg>
         </NavbarLink>
 
-        <NavbarLink
-            href="https://discord.gg/mUX9Q8u"
-            text="Discord"
-            isExternal={true}
-        >
+        <NavbarLink href="https://discord.gg/mUX9Q8u" text="Discord" isExternal={true}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="-3 -10 75 75">
                 <g xmlns="http://www.w3.org/2000/svg" clip-path="url(#clip0)">
                     <path
@@ -40,11 +33,7 @@ import NavbarLink from "./NavbarLink.astro";
             </svg>
         </NavbarLink>
 
-        <NavbarLink
-            href="https://github.com/SmolAlli/"
-            text="Github"
-            isExternal={true}
-        >
+        <NavbarLink href="https://github.com/SmolAlli/" text="Github" isExternal={true}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                 <g class="fa-group">
                     <path
@@ -57,12 +46,7 @@ import NavbarLink from "./NavbarLink.astro";
         </NavbarLink>
 
         <button id="themeButton" class="nav-item" data-color-mode-switch>
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="-10 0 512 512"
-                class="theme-icon"
-                id="lightIcon"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 0 512 512" class="theme-icon" id="lightIcon">
                 <g class="fa-group">
                     <path
                         xmlns="http://www.w3.org/2000/svg"
@@ -71,12 +55,7 @@ import NavbarLink from "./NavbarLink.astro";
                         class="fa-primary"></path>
                 </g>
             </svg>
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="-10 0 512 512"
-                class="theme-icon"
-                id="darkIcon"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 0 512 512" class="theme-icon" id="darkIcon">
                 <g class="fa-group">
                     <path
                         xmlns="http://www.w3.org/2000/svg"
