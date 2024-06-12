@@ -1,0 +1,34 @@
+---
+import ColorMode from '@julian_cataldo/astro-color-mode/ColorMode.astro';
+
+const { title, og_title, og_desc } = Astro.props.frontmatter || Astro.props;
+
+import '../styles/index.scss';
+// import Navbar from '../components/Navbar.astro';
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <ColorMode />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <meta name="generator" content={Astro.generator} />
+        <meta content={og_title} property="og:title" />
+        <meta content={og_desc} property="og:description" />
+        <title>{title}</title>
+    </head>
+    <body>
+        <!-- <Navbar /> -->
+        <main><slot /></main>
+        <style>
+            html {
+                min-height: 100% !important;
+            }
+            main {
+                top: 0px !important;
+            }
+        </style>
+    </body>
+</html>
