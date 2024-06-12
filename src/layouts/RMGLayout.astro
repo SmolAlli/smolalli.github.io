@@ -4,7 +4,7 @@ import ColorMode from '@julian_cataldo/astro-color-mode/ColorMode.astro';
 const { title, og_title, og_desc } = Astro.props.frontmatter || Astro.props;
 
 import '../styles/index.scss';
-import Navbar from '../components/Navbar.astro';
+// import Navbar from '../components/Navbar.astro';
 ---
 
 <!doctype html>
@@ -20,7 +20,15 @@ import Navbar from '../components/Navbar.astro';
         <title>{title}</title>
     </head>
     <body>
-        <Navbar />
+        <!-- <Navbar /> -->
         <main><slot /></main>
+        <style>
+            html {
+                min-height: 100% !important;
+            }
+            main {
+                top: 0px !important;
+            }
+        </style>
     </body>
 </html>

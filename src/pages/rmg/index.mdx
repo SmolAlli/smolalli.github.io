@@ -1,0 +1,54 @@
+---
+layout: '../../layouts/RMGLayout.astro'
+title: "Rosalie's Mupen GUI Setup Guide"
+og_title: "Rosalie's Mupen GUI Setup Guide"
+og_desc: "A basic guide on how to set up Rosalie's Mupen GUI (RMG)"
+---
+
+import ExternalLink from '../../components/ExternalLink.astro';
+
+# Setup
+
+<ExternalLink href="https://wermi.neocities.org/emuguide/getting_game/">Acquiring the game</ExternalLink>
+
+## Acquiring the Emulator
+
+As an alternative to Project64 1.6 (download found <ExternalLink href="https://wermi.neocities.org/emuguide/getting_emu/">here</ExternalLink> via Wermi's setup guide), you are able to use RMG. Although it is recommended to use the PJ64 emulator, this one is allowed on the leaderboards and may be used if preferred.
+
+<ExternalLink href="https://github.com/Rosalie241/RMG/releases/latest">Download</ExternalLink> (via GitHub)
+
+Download and run the installer that matches your OS (.exe for Windows, .appimage for Linux).
+
+-   There are <ExternalLink href="https://github.com/Rosalie241/RMG?tab=readme-ov-file#linux">other releases</ExternalLink> for Linux if you would prefer to see what other ways you can download/install it.
+
+## Setting up the Emulator
+
+Once installed, you should be met with an empty list of ROMs. To obtain a rom for SM64, look at <ExternalLink href="https://wermi.neocities.org/emuguide/getting_game/">this link</ExternalLink>.
+
+Now, go to settings (`ctrl` + `t` or settings → settings).
+
+• In interface → emulation, disabling "pause emulation on focus loss" and "resume emulation on focus gain" can be beneficial.
+
+• Dark mode can be found in interface → miscellaneous
+
+• (Necessary) In core, enable "override game specific settings" and change "counter factor" to "1".
+
+> • You should also make sure that "Memory size" is set to 8gb, to make sure that Usamune works.
+
+<div style="text-align: center;">
+
+![Input configuration page](/img/rmg-settings-core.png)
+
+</div>
+
+• In the plugins tab, the video plugin should be "GLideN64".
+
+• In the plugins tab, select the correct input plugin for which controller you are using. Details found [here](./plugins).
+
+<div style="text-align: center;">
+
+![Input configuration page](/img/rmg-settings-plugins.png)
+
+</div>
+
+That should be just about it for setting up the emulator! Have a look at the hotkeys tab in settings and make sure you are familiar with the hotkeys you may need (e.g. `F1` for reset).
