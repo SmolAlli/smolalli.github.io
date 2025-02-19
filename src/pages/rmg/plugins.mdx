@@ -1,0 +1,62 @@
+---
+layout: '../../layouts/RMGLayout.astro'
+title: "Rosalie's Mupen GUI Setup Guide - Plugins"
+og_title: "Rosalie's Mupen GUI Setup Guide - Plugins"
+og_desc: "A basic guide on what input plugins to use in Rosalie's Mupen GUI (RMG)"
+---
+
+import ExternalLink from '../../components/ExternalLink.astro';
+
+[← Back to setup page](../)
+
+# Plugins
+
+The input plugin that you want to use with RMG depends on the input type.
+
+The emulator comes with 3 input plugins included, those being:
+
+• raphnetraw (Mupen64Plus) for the Raphnet N64 adapter
+
+• GC Adapter Plugin for Gamecube adapters in Wii U/Switch mode (Special instructions [here](#gc-plugin))
+
+• Rosalie's Mupen GUI Input Plugin for XInput devices (e.g. Xbox, Playstation, Switch Pro Controller) and keyboards
+
+<div style="text-align: center;">
+
+![Screenshot of the input plugin options included in RMG](/img/rmg-settings-input-plugins.png)
+
+</div>
+
+For the last input plugin, it is not plug and play. To use it, connect/insert the preferred method of play, and then go to input settings (`ctrl` + `i` or settings → input). You should then select the device from the dropdown at the top, then map the buttons as preferred.
+
+<div style="text-align: center;">
+
+![Input configuration page](/img/rmg-input.png)
+
+</div>
+
+For any other device type that is not listed, you can _probably_ use a plugin designed for Mupen64Plus, however compatibility is not guaranteed.
+
+## GC Plugin
+
+For using a Gamecube controller, it is highly recommended to use the plugin bundled into RMG for it. However, to use it, there are a few steps.
+
+• Set the adapter to be in Wii U/Switch mode.
+
+• Download the <ExternalLink href="http://zadig.akeo.ie/">Zadig</ExternalLink> tool.
+
+• Open and select **Options** -> **List All Devices**.
+
+• **Important**:
+
+1. Select "WUP-028" and and ensure the USB ID has a value of <br />`057E 0337`. If it does not, you should not continue.
+
+<div style="text-align: center;">
+
+![Image of correctly selected device in the Zadig software](https://wermi.neocities.org/emuguide/img/zadig.png)
+
+</div>
+
+• Select "WinUSB" from box on the right of the arrow.
+
+• Press "(Re)install Driver"
